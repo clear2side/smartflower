@@ -22,24 +22,6 @@ an absolute positioned element -------------*/
 }
 
 
-/*------------- placeholder (input) color -------------*/
-
-@mixin placecolor($color: #fff) {
-    &::-webkit-input-placeholder {
-        color: $color;
-    }
-    &:-moz-placeholder {
-        color: $color;
-    }
-    &::-moz-placeholder {
-        color: $color;
-    }
-    &:-ms-input-placeholder {
-        color: $color;
-    }
-}
-
-
 /*------------- antialiasing mode font rendering -------------*/
 
 @mixin font-smoothing {
