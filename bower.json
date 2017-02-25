@@ -1,9 +1,10 @@
 {
-    "name": "my-project",
-    "version": "0.0.1",
-    "dependencies": {
-        "jquery": "*",
-        "normalize-css": "*",
-        "jquery-mousewheel": "*"
-    }
+  "name": "my-project",
+  "version": "0.0.1",
+  "dependencies": {
+    "jquery": "*",
+    "normalize-css": "*",
+    "jquery-mousewheel": "*",
+    "bootstrap-grid": "^3.3.6-beta.1"
+  }
 }

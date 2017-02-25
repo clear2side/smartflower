@@ -10,7 +10,6 @@ var gulp = require('gulp'),
     pngquant = require('imagemin-pngquant'),
     cache = require('gulp-cache'),
     autoprefixer = require('gulp-autoprefixer'),
-    wiredep = require('wiredep').stream,
     useref = require('gulp-useref'),
     gulpif = require('gulp-if'),
     minifyCss = require('gulp-clean-css');
@@ -23,13 +22,7 @@ gulp.task('sass', function() {
         .pipe(browserSync.reload({ stream: true }))
 });
 
-gulp.task('bower', function() {
-    return gulp.src('./app/index.html')
-        .pipe(wiredep({
-            directory: "app/libs"
-        }))
-        .pipe(gulp.dest('./app'));
-});
+
 
 gulp.task('clean', function() {
     return del.sync('dist');
@@ -59,16 +52,14 @@ gulp.task('browser-sync', function() {
     })
 });
 
-gulp.task('watch', ['browser-sync', 'bower'], function() {
+gulp.task('watch', ['browser-sync'], function() {
     gulp.watch('app/sass/**/*.+(sass|scss)', ['sass']);
-    gulp.watch('bower.json', browserSync.reload);
-    gulp.watch('app/css/**/modules.css', browserSync.reload);
     gulp.watch('app/js/**/*.js', browserSync.reload);
     gulp.watch('app/*.html', browserSync.reload);
 
 });
 
-gulp.task('build', ['clean', 'img', 'sass', 'bower'], function() {
+gulp.task('build', ['clean', 'img', 'sass'], function() {
     var buildHtml = gulp.src('app/*.html')
         .pipe(useref())
         .pipe(gulpif('*.js', uglify()))

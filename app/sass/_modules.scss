@@ -1,25 +1,105 @@
 /*------------- adjustment -------------*/
 
+$text-color: #333;
+$red-color: #981818;
+$blue-color: #003469;
+$green-color: #67bc5c;
+html,
 body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Roboto regular", sans-serif;
+    color: $text-color;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
     height: 100%;
-    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    background-size: cover;
+}
+
+h1 {
+    font-family: 'CleanvertisingLight', sans-serif;
+    color: #fff;
+    font-size: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    color: $blue-color;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    list-style: none;
+}
+
+p {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.tabs {
+    cursor: pointer;
+}
+
+* {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
 *,
 :before,
 :after {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
-    -webkit-user-select: none;
-    -moz-user-select: none;
     margin: 0;
     padding: 0;
     border: 0;
     font: inherit
+}
+
+.wrapper,
+.visible__page,
+.page {
+    height: 100%;
+    width: 100%;
+}
+
+.visible__page {
+    position: relative;
+    top: 0%;
+    transition: top 1s;
+}
+
+.page {
+    position: relative;
+}
+
+.wrapper {
+    overflow: hidden;
 }
 
 
@@ -35,9 +115,7 @@ body textarea:required:invalid {}
 /*------------- отмена выделения -------------*/
 
 body {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
+    user-select: none;
 }
 
 

@@ -1,5 +1,132 @@
 @import "modules";
 @import "fonts";
+@import "media";
 @import "mixins/layout";
 @import "mixins/mixins";
 @import "mixins/variables";
+
+/*------------- header -------------*/
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.header {
+    background-image: url('../img/header__bg1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    color: white;
+    font-family: "RobotoBold", sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.header__top {
+    padding-top: 40px;
+}
+
+.header__logo {
+    margin-top: 30px;
+}
+
+.logo__icon {
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -8px;
+    height: 50px;
+    width: 50px;
+    background-image: url(../img/flower.svg);
+    background-position: top left;
+    svg {
+        fill: #fff;
+    }
+}
+
+.logo__title {
+    color: #fff;
+}
+
+.header__tel {
+    text-align: right;
+}
+
+.header-tabs__wrapper .active {
+    color: $red-color;
+    text-decoration: underline;
+}
+
+.header-tabs__wrapper {
+    .header__tabs {
+        display: inline-block;
+        font-size: 20px;
+    }
+    .tab_item {
+        font-size: 31px;
+    }
+}
+
+.header__description {
+    margin-top: 100px;
+}
+
+.description-tabs__wrapper {
+    padding-top: 40px;
+    margin-left: 40px;
+}
+
+.description__tabs .tab {
+    font-size: 22px;
+    background-color: rgba(#fff, .25);
+    padding: 15px 20px 15px 80px;
+    margin: 0;
+    transition: .25s ease;
+    text-align: right;
+    position: relative;
+    &.active {
+        background-color: rgba(#fff, .60);
+        color: $blue-color;
+    }
+}
+
+.description-tabs__ico {
+    background-image: url(../img/flower.svg);
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 15px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.tabs__ico-1 {
+    background-position: 100% 0;
+}
+
+.tabs__ico-2 {
+    background-position: 62.8% 0;
+}
+
+.tabs__ico-3 {
+    background-position: 31.6% 0;
+    height: 39px;
+}
+
+.description-tabs__wrapper .tab_content {
+    background-color: rgba(#fff, .60);
+    font-size: 18px;
+    color: $text-color;
+    padding: 12px 20px;
+    min-height: 193px;
+}
+
+.container2 {
+    background-color: $green-color;
+}
+
+.container3 {
+    background-color: $red-color;
+}
