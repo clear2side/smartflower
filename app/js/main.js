@@ -8,7 +8,6 @@ $(document).ready(function() {
 }); // --> ready.mousewheel;
 
 
-
 $(document).ready(function() {
     /*------------- mousewheel (скрол) -------------*/
     /*------- сайт скролиться по 100% секциям ------*/
@@ -45,6 +44,7 @@ $(document).ready(function() {
     })
 
 });
+
 $(".header__tel .tab_item").not(":first").hide();
 $(".header__tel .header-tabs__wrapper .tab").click(function() {
     $(".header__tel .header-tabs__wrapper .tab").removeClass("active").eq($(this).index()).addClass("active");
@@ -52,7 +52,7 @@ $(".header__tel .header-tabs__wrapper .tab").click(function() {
 }).eq(0).addClass("active");
 
 $(".header__description .tab_item").not(":first").hide();
-$(".header__description .description-tabs__wrapper .tab").click(function() {
+$(".header__description .description-tabs__wrapper .tab").hover(function() {
     $(".header__description .description-tabs__wrapper .tab").removeClass("active").eq($(this).index()).addClass("active");
     $(".header__description .tab_item").hide().eq($(this).index()).fadeIn()
 }).eq(0).addClass("active");

@@ -6,6 +6,9 @@
 /* Medium Devices, Desktops */
 
 @media only screen and (max-width: 992px) {
+    .reason__title {
+        font-size: 30px !important;
+    }
     .header__logo,
     .header__tel {
         text-align: center !important;
@@ -13,13 +16,16 @@
     .header__logo {
         margin-bottom: 15px;
     }
+    .header__description {
+        margin-top: 40px !important;
+    }
     .header__description h1 {
-        font-size: 30px;
+        font-size: 25px;
         text-align: center;
         color: $blue-color;
     }
     .header__description h2 {
-        font-size: 20px;
+        font-size: 16px;
         color: #fff;
         text-align: center;
     }
@@ -28,6 +34,13 @@
     }
     .logo__title {
         font-size: 25px;
+    }
+    .description-tabs__wrapper .tab_content {
+        font-size: 15px !important;
+        padding: 15px 20px !important;
+    }
+    .description-tabs__wrapper {
+        margin-left: 0 !important;
     }
 }
 
@@ -43,12 +56,31 @@
     .description__tabs .tab {
         font-size: 15px !important;
     }
+    .description-tabs__wrapper .tab_content {
+        display: none;
+    }
+    .header__description h1 {
+        color: #fff;
+        margin-bottom: 20px;
+    }
+    .header__description h2 {
+        display: none !important;
+    }
+    .description__tabs {
+        display: none;
+    }
+    .description__button {
+        bottom: -50px !important;
+        left: 0 !important;
+        right: 0 !important;
+        margin: 0 auto !important;
+    }
 }
 
 
 /* Custom, iPhone Retina */
 
-@media only screen and (max-width: 320px) {}
+@media only (min-width: 750px) and (max-width: 840px) {}
 
 
 /*==========  Mobile First Method  ==========*/

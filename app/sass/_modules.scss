@@ -102,14 +102,27 @@ a:hover {
     overflow: hidden;
 }
 
+.container {
+    width: 85%;
+    margin: 0 auto;
+    height: 100%;
+    box-sizing: border-box;
+}
+
 
 /*------------- input -------------*/
 
 body input:focus:required:invalid,
-body textarea:focus:required:invalid {}
+body textarea:focus:required:invalid {
+    color: red;
+    border-color: red;
+}
 
-body input:required:invalid,
-body textarea:required:invalid {}
+body input:required:valid,
+body textarea:required:valid {
+    color: $green-color;
+    border-color: $green-color;
+}
 
 
 /*------------- отмена выделения -------------*/

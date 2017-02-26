@@ -7,12 +7,6 @@
 
 /*------------- header -------------*/
 
-.container {
-    width: 80%;
-    margin: 0 auto;
-    height: 100%;
-}
-
 .header {
     background-image: url('../img/header__bg1.jpg');
     background-repeat: no-repeat;
@@ -20,7 +14,6 @@
     background-position: right;
     color: white;
     font-family: "RobotoBold", sans-serif;
-    font-size: 40px;
     font-weight: bold;
 }
 
@@ -29,7 +22,7 @@
 }
 
 .header__logo {
-    margin-top: 30px;
+    font-size: 40px;
 }
 
 .logo__icon {
@@ -69,64 +62,205 @@
 }
 
 .header__description {
-    margin-top: 100px;
+    margin-top: 80px;
 }
 
 .description-tabs__wrapper {
-    padding-top: 40px;
-    margin-left: 40px;
+    margin-top: 20px;
 }
 
 .description__tabs .tab {
-    font-size: 22px;
+    font-size: 20px;
     background-color: rgba(#fff, .25);
-    padding: 15px 20px 15px 80px;
+    padding: 15px 20px 15px 50px;
     margin: 0;
     transition: .25s ease;
-    text-align: right;
+    text-align: left;
     position: relative;
     &.active {
         background-color: rgba(#fff, .60);
         color: $blue-color;
+        .description-tabs__ico {
+            display: block !important;
+        }
     }
 }
 
 .description-tabs__ico {
+    display: none;
     background-image: url(../img/flower.svg);
     width: 50px;
     height: 50px;
     position: absolute;
-    left: 15px;
+    right: -25px;
     top: 0;
     bottom: 0;
     margin: auto;
+    z-index: 10;
 }
 
 .tabs__ico-1 {
-    background-position: 100% 0;
+    background-position: 100% 21%;
 }
 
 .tabs__ico-2 {
-    background-position: 62.8% 0;
+    background-position: 50% 21%;
 }
 
 .tabs__ico-3 {
-    background-position: 31.6% 0;
-    height: 39px;
+    background-position: 0% 21%;
 }
 
 .description-tabs__wrapper .tab_content {
     background-color: rgba(#fff, .60);
     font-size: 18px;
     color: $text-color;
-    padding: 12px 20px;
-    min-height: 193px;
+    padding: 12px 60px;
+    min-height: 183px;
 }
 
-.container2 {
-    background-color: $green-color;
+.description__button {
+    background-color: rgba($red-color, .9);
+    color: #fff;
+    font-size: 16px;
+    position: absolute;
+    right: -25px;
+    bottom: -25px;
+    padding: 15px 25px;
+    cursor: pointer;
+    &:hover {
+        background-color: rgba($red-color, 1);
+    }
 }
 
-.container3 {
-    background-color: $red-color;
+.section2 {
+    background-image: url(../img/1.jpg);
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: cover;
+    position: relative;
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(#fff, .9);
+    }
+}
+
+.teaser {
+    position: relative;
+    background: linear-gradient(#97B8D9, #C1D4E9);
+    text-align: center;
+    height: 100px;
+    img {
+        display: block;
+        height: 100%;
+        padding: 10px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        margin: auto;
+    }
+}
+
+.reason__title {
+    font-size: 45px;
+    text-align: center;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.reason__list {
+    display: inline-block;
+    height: 100%;
+    padding: 0px 20px 20px 80px;
+}
+
+.reason__list-item {
+    font-size: 18px;
+    padding-bottom: 20px;
+}
+
+.reason__list-item .reason__list-icon {
+    display: block;
+    position: absolute;
+    left: 0;
+    margin-top: 5px;
+    height: 50px;
+    width: 50px;
+    background-image: url(../img/flower.svg);
+    background-repeat: no-repeat;
+}
+
+.rli1 {
+    background-position: 0% 47.4%;
+}
+
+.rli2 {
+    background-position: 100% 47.4%;
+}
+
+.rli3 {
+    background-position: 22% 47.4%;
+}
+
+.rli4 {
+    background-position: 76.4% 47.4%;
+}
+
+.rli5 {
+    background-position: 46.1% 47.4%;
+}
+
+.contact-form {
+    text-align: center;
+    border: 2px solid $green-color;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 20px;
+}
+
+.contact-form__label {
+    h2 {
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+    input {
+        display: block;
+        padding: 5px;
+        border-radius: 5px;
+        border: 2px solid $green-color;
+        margin: 10px auto;
+    }
+    button {
+        margin-top: 20px;
+        padding: 15px 20px;
+        background-color: rgba($green-color, .9);
+        border-radius: 5px;
+        &:hover {
+            background-color: rgba($green-color, 1);
+        }
+    }
+}
+
+.section3 {
+    background-image: url(../img/header_bg.jpg);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: cover;
+    &:before {
+        content: '';
+        background-color: rgba(#fff, .8);
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
 }
