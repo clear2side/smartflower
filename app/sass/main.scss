@@ -53,8 +53,11 @@
 
 .header-tabs__wrapper {
     .header__tabs {
-        display: inline-block;
-        font-size: 20px;
+        display: block;
+        font-size: 18px;
+        span {
+            display: block;
+        }
     }
     .tab_item {
         font-size: 31px;
@@ -69,10 +72,14 @@
     margin-top: 20px;
 }
 
+.description__tabs {
+    padding: 0;
+}
+
 .description__tabs .tab {
     font-size: 20px;
     background-color: rgba(#fff, .25);
-    padding: 15px 20px 15px 50px;
+    padding: 15px 0px 15px 50px;
     margin: 0;
     transition: .25s ease;
     text-align: left;
@@ -99,6 +106,10 @@
     z-index: 10;
 }
 
+.page {
+    box-sizing: border-box;
+}
+
 .tabs__ico-1 {
     background-position: 100% 21%;
 }
@@ -117,20 +128,6 @@
     color: $text-color;
     padding: 12px 60px;
     min-height: 183px;
-}
-
-.description__button {
-    background-color: rgba($red-color, .9);
-    color: #fff;
-    font-size: 16px;
-    position: absolute;
-    right: -25px;
-    bottom: -25px;
-    padding: 15px 25px;
-    cursor: pointer;
-    &:hover {
-        background-color: rgba($red-color, 1);
-    }
 }
 
 .section2 {
@@ -169,9 +166,9 @@
 }
 
 .reason__title {
-    font-size: 45px;
+    font-size: 40px;
     text-align: center;
-    margin-bottom: 10px;
+    margin: 30px 0;
     position: relative;
 }
 
@@ -220,7 +217,6 @@
 .contact-form {
     text-align: center;
     border: 2px solid $green-color;
-    border-radius: 5px;
     display: inline-block;
     padding: 20px;
 }
@@ -250,17 +246,134 @@
 
 .section3 {
     background-image: url(../img/header_bg.jpg);
-    background-repeat: no-repeat;
+    background-attachment: fixed;
     background-position: right bottom;
     background-size: cover;
-    &:before {
-        content: '';
-        background-color: rgba(#fff, .8);
+}
+
+.section3__slider {
+    background-color: rgba(#fff, 0.75);
+    height: 100%;
+    padding: 0;
+}
+
+.carousel {
+    height: 100%;
+    display: block;
+}
+
+.carousel-inner {
+    text-align: center !important;
+}
+
+.carousel-img {
+    position: relative;
+}
+
+.carousel-caption {
+    font-size: 20px;
+    color: $text-color;
+    text-shadow: none;
+    display: block;
+    position: relative;
+    width: 50%;
+    padding: 0;
+    margin: 40px 0 5px 60px !important;
+}
+
+.carousel-indicators li {
+    vertical-align: center;
+    border: 3px solid #c7c7c7;
+    padding: 6px;
+}
+
+.section4 {
+    text-align: center;
+}
+
+.map-tabs__wrapper {
+    text-align: center;
+    .map__tabs {
+        font-size: 16px;
+        display: inline-block;
+        .tab {
+            border: 2px solid $c9;
+            background: $c9;
+            float: left;
+            color: #fff;
+            padding: 3px 100px;
+            border-radius: 6px;
+            cursor: pointer;
+            text-transform: uppercase;
+            &.active {
+                background-color: #fff;
+                color: $c1;
+            }
+            &:first-child {
+                border-radius: 6px 0 0 6px;
+            }
+            &:last-child {
+                border-radius: 0 6px 6px 0;
+            }
+        }
+    }
+    .tab_content {
         display: block;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
+        font-size: 25px;
+    }
+}
+
+.dizaap__contacts {
+    text-align: left;
+    p {
+        display: block;
+    }
+    span {
+        display: block;
+    }
+}
+
+.top__contacts {
+    display: block;
+    margin: 20px;
+}
+
+.description__button {
+    background: #9469A2;
+    color: #fff;
+    margin-top: 10px;
+    padding: 3px 100px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 20px;
+    text-transform: uppercase;
+    &:hover {
+        background-color: rgba($red-color, .9);
+    }
+}
+
+.smart__contacts {
+    margin-top: 50px;
+    position: relative;
+    span:first-child {
+        display: inline-block;
+        height: 100px;
+        width: 100px;
+        background-image: url(../img/flower.svg);
+        background-position: 13% 0%;
+    }
+    span:last-child {
+        display: block;
+    }
+}
+
+.logo__dizaap {
+    line-height: 200px;
+    span {
+        background-image: url(../img/flower.svg);
+        background-position: 53% 100%;
+        width: 237px;
+        height: 40px;
+        display: inline-block;
     }
 }

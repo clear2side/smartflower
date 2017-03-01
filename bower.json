@@ -5,6 +5,7 @@
     "jquery": "*",
     "normalize-css": "*",
     "jquery-mousewheel": "*",
-    "bootstrap-grid": "^3.3.6-beta.1"
+    "bootstrap-grid": "^3.3.6-beta.1",
+    "bootstrap": "^3.3.7"
   }
 }
