@@ -209,6 +209,7 @@
 /*------------- section 3 -------------*/
 
 .section3 {
+    text-align: center;
     background-image: url(../img/header_bg.jpg);
     background-attachment: fixed;
     background-position: right bottom;
@@ -235,6 +236,133 @@
     vertical-align: middle;
     line-height: 60px;
     margin: 0;
+}
+
+#slides {
+    display: none
+}
+
+a.slidesjs-next,
+a.slidesjs-previous,
+a.slidesjs-play,
+a.slidesjs-stop {
+    display: block;
+    overflow: hidden;
+    text-indent: -9999px;
+    z-index: 40;
+}
+
+.carousel-caption {
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+a.slidesjs-previous {
+    display: block;
+    position: absolute;
+    width: 200px;
+    background: linear-gradient(to right, #c7c7c7, rgba(0, 0, 0, 0));
+    top: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+}
+
+a.slidesjs-previous:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    content: '\2329';
+    font-size: 60px;
+    height: 100px;
+    color: #666;
+    overflow: hidden;
+    text-indent: -0.8px;
+    cursor: pointer;
+}
+
+a.slidesjs-previous:hover {
+    background: linear-gradient(to right, #999, rgba(0, 0, 0, 0));
+}
+
+a.slidesjs-previous:hover:before {
+    color: $red-color;
+}
+
+a.slidesjs-next {
+    display: block;
+    position: absolute;
+    width: 200px;
+    background: linear-gradient(to left, #c7c7c7, rgba(0, 0, 0, 0));
+    top: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+}
+
+a.slidesjs-next:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    content: '\232A';
+    font-size: 60px;
+    color: #666;
+    height: 100px;
+    overflow: hidden;
+    text-indent: -0.8px;
+    cursor: pointer;
+}
+
+a.slidesjs-next:hover {
+    background: linear-gradient(to left, #999, rgba(0, 0, 0, 0));
+}
+
+a.slidesjs-next:hover:before {
+    color: $red-color;
+}
+
+.slidesjs-pagination {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    display: block;
+    width: 100px;
+    margin-bottom: 50px;
+    list-style: none;
+}
+
+.slidesjs-pagination li {
+    float: left;
+    margin: 0 3px;
+}
+
+.slidesjs-pagination li a {
+    display: block;
+    width: 13px;
+    height: 0;
+    padding-top: 13px;
+    background-image: url(../img/pagination.png);
+    background-position: 0 0;
+    float: left;
+    overflow: hidden;
+}
+
+.slidesjs-pagination li a.active,
+.slidesjs-pagination li a:hover.active {
+    background-position: 0 -13px
+}
+
+.slidesjs-pagination li a:hover {
+    background-position: 0 -26px
 }
 
 
@@ -302,7 +430,7 @@
 }
 
 .description__button {
-    background: #9469A2;
+    background-color: rgba($red-color, .8);
     color: #fff;
     margin-top: 10px;
     padding: 3px 100px;
