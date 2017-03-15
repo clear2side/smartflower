@@ -13,9 +13,8 @@ body {
 }
 
 body {
-    font-family: "Roboto regular", sans-serif;
+    font-family: "helvetica", sans-serif;
     color: $text-color;
-    font-weight: normal;
     font-size: 16px;
     line-height: 1.6;
     margin: 0;
@@ -23,21 +22,6 @@ body {
     height: 100%;
     box-sizing: border-box;
     background-size: cover;
-}
-
-h1 {
-    font-family: 'CleanvertisingLight', sans-serif;
-    color: #fff;
-    font-size: 40px;
-    margin: 0;
-    padding: 0;
-}
-
-h2 {
-    color: $blue-color;
-    font-size: 20px;
-    margin: 0;
-    padding: 0;
 }
 
 ul {
@@ -67,7 +51,6 @@ a:hover {
 }
 
 * {
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -96,6 +79,7 @@ a:hover {
 
 .page {
     position: relative;
+    overflow: hidden;
 }
 
 .wrapper {

@@ -46,38 +46,12 @@ $(document).ready(function() {
 });
 
 $(".header__description .tab_item").not(":first").hide();
-$(".header__description .description-tabs__wrapper .tab").hover(function() {
+$(".header__description .description-tabs__wrapper .tab").click(function() {
     $(".header__description .description-tabs__wrapper .tab").removeClass("active").eq($(this).index()).addClass("active");
     $(".header__description .tab_item").hide().eq($(this).index()).fadeIn()
 }).eq(0).addClass("active");
 
-$(".map-tabs__wrapper .tab_item").not(":first").hide();
-$(".map-tabs__wrapper .tab").click(function() {
-    $(".map-tabs__wrapper .tab").removeClass("active").eq($(this).index()).addClass("active");
-    $(".map-tabs__wrapper .tab_item").hide().eq($(this).index()).fadeIn()
-}).eq(0).addClass("active");
 
-//Каруселька
-//Документация: http://owlgraphic.com/owlcarousel/
-/*var owl = $(".carousel");
-owl.owlCarousel({
-    items: 4
-});
-owl.on("mousewheel", ".owl-wrapper", function(e) {
-    if (e.deltaY > 0) {
-        owl.trigger("owl.prev");
-    } else {
-        owl.trigger("owl.next");
-    }
-    e.preventDefault();
-});
-$(".next_button").click(function() {
-    owl.trigger("owl.next");
-});
-$(".prev_button").click(function() {
-    owl.trigger("owl.prev");
-});
-*/
 /*
 $(document).ready(function() {
 
