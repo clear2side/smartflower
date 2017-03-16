@@ -6,7 +6,6 @@
     <title>Document</title>
     <link rel="shortcut icon" href="img/favicon.ico">
     <!-- build:css css/compiled.css -->
-    <link rel="stylesheet" href="libs/normalize-css/normalize.css" />
     <link rel="stylesheet" href="css/main.css">
     <!-- endbuild -->
 </head>
@@ -85,7 +84,7 @@
                 <div class="slider__wrap">
                     <div id="slides">
                         <div class="item">
-                            <img src="img/clients/client-2.jpg" style="margin-top: 50px; display: inline-block; border-radius: 150px" alt="happy_client">
+                            <img class="slider__img" src="img/clients/client-2.jpg" style="margin-top: 50px; display: inline-block; border-radius: 150px" alt="happy_client">
                             <div class="carousel-caption">
                                 <p>"Мы приобрели smartflower, потому что были убеждены о системе в целом. Теперь мы сможем значительно уменьшить наше внутреннее потребление энергии. Мы были особенно рады системой слежения за двойной осью, в результате чего наша smartflower всегда стоит под совершенным углом к солнцу. Кроме того, он выглядит великолепно!"</p>
                                 <h3 client="happy-client">STEPHANIE AND BERNHARD DUBS, SWITZERLAND</h3>
@@ -146,8 +145,8 @@
             </section>
             <section class="page section5">
                 <div class="container">
+                    <h3>Остались вопросы?</h3>
                     <div class="top__contacts">
-                        <h2 class="map__title">Эксклюзивно в Украине  </h2>
                         <button class="description__button button">узнать цену</button>
                     </div>
                     <div class="dizaap__contacts">
@@ -187,8 +186,7 @@
     <script>
     $(function() {
         $('#slides').slidesjs({
-            width: 940,
-            height: 528,
+
             play: {
                 active: true,
                 auto: true,

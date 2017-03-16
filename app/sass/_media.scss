@@ -1,89 +1,144 @@
 /* Large Devices, Wide Screens */
 
-@media only screen and (max-width: 1200px) {}
+@media only screen and (max-width: 1200px) {
+    .header__logo,
+    .header__tel {
+        font-size: 35px !important;
+        padding: 0 !important;
+    }
+}
 
 
 /* Medium Devices, Desktops */
 
 @media only screen and (max-width: 992px) {
-    .reason__title {
-        font-size: 30px !important;
-    }
-    .header__logo,
-    .header__tel {
-        text-align: center !important;
-    }
-    .header__logo {
-        margin-bottom: 15px;
-    }
     .header__description {
-        margin-top: 40px !important;
+        margin-top: 30px !important;
+        h3 {
+            font-size: 30px !important;
+        }
     }
-    .header__description h1 {
-        font-size: 25px;
-        text-align: center;
-        color: $blue-color;
+    .video__description {
+        padding: 0px 20px !important;
+        p {
+            font-size: 14px;
+        }
     }
-    .header__description h2 {
-        font-size: 16px;
-        color: #fff;
-        text-align: center;
-    }
-    .header__tel .tab_item {
-        font-size: 23px !important;
-    }
-    .logo__title {
-        font-size: 25px;
-    }
-    .description-tabs__wrapper .tab_content {
-        font-size: 15px !important;
-        padding: 15px 20px !important;
-    }
-    .description-tabs__wrapper {
-        margin-left: 0 !important;
-    }
-    .codrops__list {
-        display: none;
+    .slider__teaser {
+        font-size: 35px !important;
     }
 }
 
 
 /* Small Devices, Tablets */
 
-@media only screen and (max-width: 768px) {}
+@media only screen and (max-width: 768px) {
+    .header__logo,
+    .header__tel {
+        float: none !important;
+        text-align: center !important;
+    }
+    .header__description {
+        margin-top: 0px !important;
+        h3 {
+            display: inline-block;
+            text-align: center;
+            font-size: 25px !important;
+        }
+    }
+    .description__tabs--button {
+        margin: 0 !important;
+    }
+    .video__description {
+        display: none !important;
+    }
+    .video__wrap {
+        width: 100% !important;
+    }
+    .slider__teaser {
+        font-size: 25px !important;
+    }
+    .slidesjs-previous {
+        width: 100px !important;
+    }
+    .slidesjs-next {
+        width: 100px !important;
+    }
+}
 
 
 /* Extra Small Devices, Phones */
 
 @media only screen and (max-width: 480px) {
-    .description__tabs .tab {
-        font-size: 15px !important;
+    .header__logo,
+    .header__tel {
+        font-size: 27px !important;
     }
-    .description-tabs__wrapper .tab_content {
-        display: none;
-    }
-    .header__description h1 {
-        color: #fff;
-        margin-bottom: 20px;
-    }
-    .header__description h2 {
-        display: none !important;
+    .header__description {
+        margin-top: 10px !important;
+        h3 {
+            display: none !important;
+        }
     }
     .description__tabs {
+        margin-top: 20px;
+    }
+    .description__tabs .tab {
+        font-size: 16px !important;
+        padding: 5px 10px !important;
+    }
+    .description-tabs__wrapper .tab_content {
+        font-size: 16px !important;
+        padding: 5px 20px !important;
+    }
+    .description__tabs--button {
+        font-size: 12px !important;
+        padding: 5px 40px !important;
+    }
+    .slider__teaser {
+        display: none !important;
+    }
+    .slidesjs-pagination {
+        top: 3% !important;
+    }
+}
+
+
+/*-------------height 600px 480px-------------*/
+
+@media only screen and (max-height: 600px) {
+    .header__logo,
+    .header__tel {
+        padding: 0 !important;
+    }
+    .header__description {
+        margin-top: 30px !important;
+    }
+    .header__description {
+        margin-top: 30px !important;
+        h3 {
+            font-size: 25px !important;
+        }
+    }
+    .video__description {
+        padding: 0px 30px !important;
+    }
+    .slider__teaser {
+        font-size: 20px !important;
+    }
+}
+
+@media only screen and (max-height: 480px) {
+    .header__description h3 {
         display: none;
     }
-    .description__button {
-        bottom: -50px !important;
-        left: 0 !important;
-        right: 0 !important;
-        margin: 0 auto !important;
+    .video__description {
+        display: none !important;
     }
 }
 
 
 /* Custom, iPhone Retina */
-
-@media only (min-width: 750px) and (max-width: 840px) {}
 
 
 /*==========  Mobile First Method  ==========*/
