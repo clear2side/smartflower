@@ -382,22 +382,22 @@ a.slidesjs-next:hover:before {
 /*------------- section4 -------------*/
 
 .section4 {
-    padding-top: 50px;
     background-color: #F8F6F7;
-    padding-bottom: 50px;
+    padding-top: 30px;
     h3 {
         font-weight: 300;
-        font-size: 50px;
-        line-height: 50px;
+        font-size: 40px;
+        margin: 0;
     }
     h4 {
         font-weight: 300;
-        font-size: 40px;
+        font-size: 30px;
+        margin: 0;
     }
 }
 
 .tech__info {
-    margin-top: 70px;
+    margin-top: 40px;
     font-weight: 600;
     @include clearfix;
     .left__info {
@@ -420,39 +420,36 @@ a.slidesjs-next:hover:before {
 
 /*------------- section5 -------------*/
 
-.section5 {
+.footer {
     text-align: center;
     background-image: url(../img/last-page.jpg);
     background-position: right bottom;
     background-size: cover;
-    padding-top: 50px;
+    padding: 50px 0;
+    .container {
+        position: relative;
+    }
+}
+
+.footer__request {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
     h3 {
         font-size: 50px;
         color: #fff;
+        font-weight: 300;
+        margin: 0;
     }
 }
 
-.dizaap__contacts {
-    text-align: left;
-    color: #fff;
-    p {
-        display: block;
-    }
-    span {
-        display: block;
-    }
-}
-
-.top__contacts {
-    display: block;
-    margin: 20px;
-}
-
-.description__button {
+.footer__top-button {
     background-color: rgba($red-color, .8);
     color: #fff;
     margin-top: 10px;
-    padding: 3px 100px;
+    padding: 3px 60px;
     border-radius: 6px;
     cursor: pointer;
     font-size: 20px;
@@ -462,9 +459,31 @@ a.slidesjs-next:hover:before {
     }
 }
 
+.dizaap__contacts {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    text-align: left;
+    color: #fff;
+    height: 215px;
+    p {
+        display: inline-block;
+        font-size: 18px;
+    }
+    span {
+        display: block;
+    }
+}
+
 .smart__contacts {
-    margin-top: 50px;
-    position: relative;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 200px;
     span:first-child {
         display: inline-block;
         height: 100px;
@@ -480,7 +499,11 @@ a.slidesjs-next:hover:before {
 }
 
 .logo__dizaap {
-    line-height: 200px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
     span {
         background-image: url(../img/flower.svg);
         background-position: 53% 100%;

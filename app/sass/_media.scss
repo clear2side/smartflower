@@ -79,6 +79,42 @@
     .slider__img {
         height: 150px !important;
     }
+    .section4 {
+        h3 {
+            font-size: 25px !important;
+        }
+        h4 {
+            display: none !important;
+        }
+        .tech__info {
+            margin-top: 20px !important;
+            font-size: 14px !important;
+        }
+    }
+    .footer {
+        padding: 0 0 !important;
+        .container {
+            display: block !important;
+            position: static !important;
+            h3 {
+                font-size: 26px;
+            }
+            div {
+                display: block !important;
+                position: static !important;
+                margin: 15px;
+            }
+            button {
+                font-size: 15px;
+            }
+            .smart__contacts {
+                display: none !important;
+            }
+            .dizaap__contacts {
+                text-align: center;
+            }
+        }
+    }
 }
 
 
@@ -132,6 +168,18 @@
     .slidesjs-pagination {
         bottom: 0% !important;
     }
+    .tech__info p {
+        font-size: 11px !important;
+    }
+    .section4 {
+        padding-top: 10px !important;
+        h3 {
+            font-size: 15px !important;
+        }
+    }
+    .smart__contacts {
+        display: none !important;
+    }
 }
 
 
@@ -161,6 +209,36 @@
     .slidesjs-pagination {
         bottom: 0% !important;
     }
+    .section4 {
+        padding: 0 !important;
+        h4 {
+            display: none !important;
+        }
+    }
+    .tech__info {
+        font-size: 13px !important;
+    }
+    .footer {
+        padding: 0 0 !important;
+        .container {
+            display: block;
+            position: static;
+            h3 {
+                font-size: 26px;
+            }
+            div {
+                display: block;
+                position: static;
+                margin: 15px;
+            }
+            button {
+                font-size: 15px;
+            }
+            .smart__contacts {
+                display: none !important;
+            }
+        }
+    }
 }
 
 @media only screen and (max-height: 600px) {
@@ -186,6 +264,18 @@
     .slider__img {
         margin-top: 0px !important;
     }
+    .section4 {
+        h3 {
+            font-size: 30px;
+        }
+        h4 {
+            font-size: 20px !important;
+        }
+    }
+    .tech__info {
+        margin-top: 20px !important;
+        font-size: 14px;
+    }
 }
 
 @media only screen and (max-height: 800px) {
@@ -206,6 +296,34 @@
 @media only screen and (max-height: 1280px) {
     .slidesjs-container {
         height: 1280px !important;
+    }
+}
+
+@media screen and (max-width:600px) and (max-height:600px) {
+    .footer {
+        padding: 0 0 !important;
+        .container {
+            display: block;
+            position: static;
+            h3 {
+                font-size: 26px;
+            }
+            div {
+                display: block;
+                position: static;
+                margin: 15px;
+            }
+            p {
+                font-size: 17px;
+            }
+            button {
+                font-size: 15px;
+            }
+            .dizaap__contacts {
+                margin-top: 30px;
+                text-align: center;
+            }
+        }
     }
 }
 
