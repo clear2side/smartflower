@@ -26,9 +26,9 @@
                         <div class="header__tel">+38 (068) 021 21 21</div>
                     </div>
                     <div class="header__description">
-                        <h3>Генерируйте энергию.</h3>
-                        <h3>Храните энергию.</h3>
-                        <h3>Живите в свое удовольствие.</h3>
+                        <h3 class="description__title">Генерируйте энергию.</h3>
+                        <h3 class="description__title">Храните энергию.</h3>
+                        <h3 class="description__title">Живите в свое удовольствие.</h3>
                         <div class="description-tabs__wrapper">
                             <ul class="description__tabs tabs">
                                 <li class="tab"> Свобода</li>
@@ -52,18 +52,18 @@
                                 <ul class="tab_item">
                                     <li>
                                         <span class="dt4"></span>
-                                        <span>Ваша независимость от энергосетей и посредников</span>
+                                        <span>Производит на 60% больше</span>
                                     </li>
                                     <li>
                                         <span class="dt5"></span>
-                                        <span>Самообслуживаемость</span>
+                                        <span>Портативность(снял перевез с собой)</span>
                                     </li>
                                     <li>
                                         <span class="dt6"></span>
-                                        <span>Установка за 1 час</span>
+                                        <span>Хранение запаса енергии</span>
                                     </li>
                                 </ul>
-                                <button class="description__tabs--button">узнать больше</button>
+                                <div class="description__tabs--button"><a href="javascript:PopUpShow()">узнать больше</a></div>
                             </div>
                         </div>
                     </div>
@@ -147,7 +147,8 @@
                 <div class="container">
                     <div class="footer__request">
                         <h3>Остались вопросы?</h3>
-                        <button class="footer__top-button">узнать цену</button>
+                        <button class="footer__top-button">
+                            <a href="javascript:PopUpShow()">узнать цену</a></button>
                     </div>
                     <div class="dizaap__contacts">
                         <p><span>Киев, Украина</span>
@@ -177,6 +178,27 @@
             </section>
         </div>
     </div>
+    <div class="b-popup" id="popup1">
+        <div class="hidden__form--wrapper">
+            <div class="b-popup-content">
+                <div class="callback__form">
+                    <h4>Наш специалист свяжется с вами</h4>
+                    <div>
+                        <span>Как вас зовут?</span>
+                        <input type="text" placeholder="имя">
+                    </div>
+                    <div>
+                        <span>Введите ваш номер телефона</span>
+                        <input type="text" placeholder="телефон">
+                    </div>
+                    <button class="button__form">
+                        Оставить заявку
+                    </button>
+                    <a href="javascript:PopUpHide()">x</a>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- build:js scripts/compiled.js -->
     <script src="libs/jquery/dist/jquery.js"></script>
     <script src="libs/jquery-mousewheel/jquery.mousewheel.js"></script>
@@ -186,7 +208,6 @@
     <script>
     $(function() {
         $('#slides').slidesjs({
-
             play: {
                 active: true,
                 auto: true,
