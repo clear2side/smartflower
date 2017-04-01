@@ -1,6 +1,8 @@
 $(document).ready(function() {
 
     /*------------- mousewheel (скрол) -------------*/
+    //Скрыть PopUp при загрузке страницы
+    PopUpHide();
     /*------- сайт скролиться по 100% секциям ------*/
     var
         screen = 0,
@@ -34,10 +36,7 @@ $(document).ready(function() {
         }, 500);
     })
 });
-$(document).ready(function() {
-    //Скрыть PopUp при загрузке страницы
-    PopUpHide();
-});
+
 //Функция отображения PopUp
 function PopUpShow() {
     $("#popup1").show();
@@ -46,13 +45,6 @@ function PopUpShow() {
 function PopUpHide() {
     $("#popup1").hide();
 }
-
-
-$(".header__description .tab_item").not(":first").hide();
-$(".header__description .description-tabs__wrapper .tab").click(function() {
-    $(".header__description .description-tabs__wrapper .tab").removeClass("active").eq($(this).index()).addClass("active");
-    $(".header__description .tab_item").hide().eq($(this).index()).fadeIn()
-}).eq(0).addClass("active");
 
 $("form").submit(function() {
     $.ajax({
@@ -65,3 +57,9 @@ $("form").submit(function() {
     });
     return false;
 });
+
+$(".header__description .tab_item").not(":first").hide();
+$(".header__description .description-tabs__wrapper .tab").click(function() {
+    $(".header__description .description-tabs__wrapper .tab").removeClass("active").eq($(this).index()).addClass("active");
+    $(".header__description .tab_item").hide().eq($(this).index()).fadeIn()
+}).eq(0).addClass("active");

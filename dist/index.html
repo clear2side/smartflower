@@ -3,153 +3,223 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Smartflower</title>
     <link rel="shortcut icon" href="img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/compiled.css">
 </head>
 
 <body>
     <div class="wrapper">
         <div class="visible__page">
-            <section class="page header">
+            <section data-section="section1" class="page header">
                 <div class="container">
                     <div class="header__top">
-                        <div class="header__logo col-md-6 col-sm-6">
+                        <div class="header__logo">
                             <a class="logo__link" href="#">
                                 <span class="logo__icon"></span>
                                 <span class="logo__title">Smartflower</span>
                             </a>
                         </div>
-                        <div class="header__tel col-md-6 col-sm-6">
-                            <div class="header-tabs__wrapper">
-                                <div class="header__tabs tabs">
-                                    <span class="tab">ул.Механизаторов</span> /
-                                    <span class="tab">ул.Нововокзальная</span>
-                                </div>
-                                <div class="tab_content">
-                                    <div class="tab_item">+38 (068) 021 21 21</div>
-                                    <div class="tab_item">+38 (093) 987 45 50</div>
-                                </div>
-                            </div>
-                        </div>
+                        <div class="header__tel">+38 (068) 021 21 21</div>
                     </div>
-                    <div class="header__description col-md-12 col-sm-12">
-                        <h1>Чистая энергия для всех.</h1>
-                        <h2>Первая в мире солнечная система "все-в-одном"</h2>
-                        <div class="description-tabs__wrapper col-md-9">
-                            <ul class="description__tabs tabs col-md-5">
-                                <li class="tab"> Инновация на рынке <span class="tabs__ico-1 description-tabs__ico"></span></li>
-                                <li class="tab"><span class="tabs__ico-2 description-tabs__ico"></span> Умная техника </li>
-                                <li class="tab"><span class="tabs__ico-3 description-tabs__ico"></span>Экономия до 60%</li>
+                    <div class="header__description">
+                        <h3 class="description__title">Генерируйте энергию.</h1>
+                        <h3 class="description__title">Храните энергию.</h2>
+                        <h3 class="description__title">Живите в свое удовольствие.</h3>
+                        <div class="description-tabs__wrapper">
+                            <ul class="description__tabs tabs">
+                                <li class="tab"> Свобода</li>
+                                <li class="tab"> Практичность </li>
                             </ul>
-                            <div class="tab_content col-md-7">
-                                <div class="tab_item">Умная функция слежения за Солнцем обеспечивает максимальное использование солнечной энергии в любое время дня и года.</div>
-                                <div class="tab_item">С первыми лучами система автоматически начинает работу, чтобы полностью обеспечить ваш дом электроэнергией.</div>
-                                <div class="tab_item">Smartflower генерирует больше энергии, чем вы используете, накапливая заряд при помощи встроенных аккумуляторов. Поэтому вы будете в плюсе даже в облачные дни и ночью.</div>
+                            <div class="tab_content">
+                                <ul class="tab_item">
+                                    <li>
+                                        <span class="dt1"></span>
+                                        <span>Установка за 1 час</span>
+                                    </li>
+                                    <li>
+                                        <span class="dt2"></span>
+                                        <span>Ваша независимость от энергосетей и посредников</span>
+                                    </li>
+                                    <li>
+                                        <span class="dt3"></span>
+                                        <span>Самообслуживаемость</span>
+                                    </li>
+                                </ul>
+                                <ul class="tab_item">
+                                    <li>
+                                        <span class="dt4"></span>
+                                        <span>Производит на 60% больше</span>
+                                    </li>
+                                    <li>
+                                        <span class="dt5"></span>
+                                        <span>Портативность(снял перевез с собой)</span>
+                                    </li>
+                                    <li>
+                                        <span class="dt6"></span>
+                                        <span>Хранение запаса енергии</span>
+                                    </li>
+                                </ul>
+                                <a href="javascript:PopUpShow()">
+                                    <button class="description__tabs--button button">узнать больше</button>
+                                </a>
                             </div>
-                            <button class="description__button button">заказать</button>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="page section2">
-                <div class="teaser">
-                    <img src="img/flower-dizaap.png" alt="">
+            <section data-section="section2" class="page section2">
+                <div class="video__description">
+                    <span>
+                    <h4>Видео</h4>
+                    <p>Полностью интегрированная<br> солнечная система<br>"все в одном" которую можно подключить<br>и ввести в экстплуатацию так<br>просто, как обычный<br>бытoвой прибор.</p>
+                    </span>
                 </div>
-                <div class="reason">
-                    <div class="container">
-                        <h2 class="reason__title">5 причин почему вам стоит выбрать smartflower</h2>
-                        <ul class="reason__list col-md-9">
-                            <li class="reason__list-item"><span class="reason__list-icon rli1"></span>Цельная солнечная система со встроенным аккумулятором и простой и лёгкой установкой (включи и работай).</li>
-                            <li class="reason__list-item"><span class="reason__list-icon rli2"></span>Эффективное производство энергии: система на 40% производительнее статичных солнечных панелей благодаря умному отслеживанию положения Солнца.</li>
-                            <li class="reason__list-item"><span class="reason__list-icon rli3"></span>Умные системы очистки и охлаждения снижают потери при выработке электроэнергии до 15 процентов</li>
-                            <li class="reason__list-item"><span class="reason__list-icon rli4"></span>Идеален, если Вы не можете использовать крышу (установка, внешний вид, арендуемая недвижимость). Вы можете установить Smartflower в саду и забрать с собой при переезде.</li>
-                            <li class="reason__list-item"><span class="reason__list-icon rli5"></span>Высочайшее качество, производство в Австрии, своевременная квалифицированная поддержка дистрибьютора.</li>
-                        </ul>
-                        <div class="contact-form col-md-3">
-                            <div class="contact-form__label">
-                                <h2>Связаться с нами</h2>
-                                <input type="text" placeholder="Ваше имя">
-                                <span></span>
-                                <input type="text" placeholder="Ваш телефон">
-                                <input type="text" placeholder="Ваш город">
-                                <button>Отправить заявку</button>
+                <div class="video__wrap">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/WuZFG1R0hyY?rel=0&amp;controls=1" data-autoplay frameborder="0" allowfullscreen></iframe>
+                </div>
+            </section>
+            <section data-section="section3" class="page section3">
+                <h3 class="slider__teaser">5 причин приобрести Smartflower</h3>
+                <div class="slider__wrap">
+                    <div id="slides">
+                        <div class="item">
+                            <img class="slider__img" src="img/slider__img/slider-1.jpg" alt="energy">
+                            <div class="carousel-caption">
+                                <p>Цельная солнечная система со встроенным аккумулятором и простой и легкой установкой (включи и работай).
+                                    <br>Полностью интегрировання солнечная система "все в одном", которую можно подключить и ввести в эксплуатацию так просто, как обычный бытовой прибор.</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img class="slider__img" src="img/slider__img/slider-2.jpg" alt="economy">
+                            <div class="carousel-caption">
+                                <p>Эффективное производство энергии: система на 40% производительнее статичных солнечных панелей благодаря умному отслеживанию положения Солнца.
+                                    <br> С первыми лучами система автоматически начинает работу, чтобы полностью обеспечить ваш дом электроэнергией.</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img class="slider__img" src="img/slider__img/slider-3.jpg" alt="sun">
+                            <div class="carousel-caption">
+                                <p>Умные системы очистки и охлаждения снижают потери при выработке электроэнергии до 15 процентов - smartflower POP легко очищает себя от отложений пыли или снега, складываясь и раскрываясь.
+                                    <br> При постоянной эксплуатации датчики непрерывно следят за скоростью ветра.</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img class="slider__img" src="img/slider__img/slider-4.jpg" alt="modern">
+                            <div class="carousel-caption">
+                                <p>Вы можете установить Smartflower в саду и забрать с собой при переезде.
+                                    <br>Демонтаж smartflower осуществляется так же просто, как и его установка: просто отверните четыре анкерных болта и перевезите его на прицепе. </p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img class="slider__img" src="img/slider__img/slider-5.jpg" alt="future">
+                            <div class="carousel-caption">
+                                <p>Высочайшее качество, производство в Австрии.
+                                    <br> своевременная квалифицированная поддержка дистрибьютора.</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="page section3">
-                <div class="section3__item1">
-                    <span><b>« preveous demo:</b> accordion with css3</span>
-                    <ul class="codrops__list">
-                        <li>pattern from dinpatternicons</li>
-                        <li>icons by: lazycrazy via medialoot</li>
-                        <li><b>back to the codrops article</b></li>
-                    </ul>
-                </div>
-                <div class="section3__item2"></div>
-                <div class="section3__item3"></div>
-                <div class="section3__item4 col-md-12">
-                    <div class="carousel">
-                        <div class="container">
-                            <br>
-                            <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                                <!-- Indicators -->
-                                <ol class="carousel-indicators">
-                                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                                    <li data-target="#myCarousel" data-slide-to="1"></li>
-                                    <li data-target="#myCarousel" data-slide-to="2"></li>
-                                    <li data-target="#myCarousel" data-slide-to="3"></li>
-                                </ol>
-                                <!-- Wrapper for slides -->
-                                <div class="carousel-inner" role="listbox">
-                                    <div class="item active">
-                                        <img src="img_chania.jpg" alt="Chania" width="460" height="345">
-                                        <div class="carousel-caption">
-                                            <h3>Chania</h3>
-                                            <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <img src="img_chania2.jpg" alt="Chania" width="460" height="345">
-                                        <div class="carousel-caption">
-                                            <h3>Chania</h3>
-                                            <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <img src="img_flower.jpg" alt="Flower" width="460" height="345">
-                                        <div class="carousel-caption">
-                                            <h3>Flowers</h3>
-                                            <p>Beatiful flowers in Kolymbari, Crete.</p>
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <img src="img_flower2.jpg" alt="Flower" width="460" height="345">
-                                        <div class="carousel-caption">
-                                            <h3>Flowers</h3>
-                                            <p>Beatiful flowers in Kolymbari, Crete.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Left and right controls -->
-                                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-                                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                                    <span class="sr-only">Previous</span>
-                                </a>
-                                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                                    <span class="sr-only">Next</span>
-                                </a>
-                            </div>
+            <section data-section="section4" class="page section4">
+                <div class="container">
+                    <h3>Наслаждайтесь энергией солнца.</h3>
+                    <h4>Двадцать четыре часа в сутки, почти независимо от электросети.</h4>
+                    <div class="tech__info">
+                        <div class="left__info">
+                            <p>Система генерирует в среднем 4500 кВт*ч в год (3400-6200 кВт*ч в завиимости от региона), что покрывает полную среднюю потребность в электричестве одной семьи в центрально-европейском регионе.
+                                <br> Число циклов аккумулятора - 5000 циклов (50% глубина разрядки)</p>
                         </div>
+                        <div class="right__info">
+                            <p>Область рабочих температур: от -20*С до +50*С
+                                <br>
+                                <br> Вес системы: около 800 кг
+                                <br>Карантия батареи: 5 лет.
+                                <br>
+                                <br>Все под контролем: Доступен мониторинг и настройка системы при помощи локальной сети, Wi-Fi и веб-интерфейса.</p>
+                        </div>
+                    </div>
+                    <img class="tech__img" src="img/pop2.png" alt="automaticaly">
+                </div>
+            </section>
+            <section data-section="section5" class="page footer">
+                <div class="container">
+                    <div class="footer__request">
+                        <h3>Остались вопросы?</h3>
+                        <a href="javascript:PopUpShow()">
+                            <button class="footer__top-button button">
+                                узнать цену</button>
+                        </a>
+                    </div>
+                    <div class="dizaap__contacts">
+                        <p><span>Киев, Украина</span>
+                            <span>ул. Нововокзальная, 3, 9 этаж</span>
+                            <span>ул. Механизаторов, 2, оф. 498</span>
+                        </p>
+                        <br>
+                        <p>+38 (068) 021 21 21</p>
+                        <br>
+                        <p>
+                            <span>
+                                <a href="d@dizaap.com">d@dizaap.com</a>
+                            </span>
+                            <span>
+                            <a href="www.dizaap.com">www.dizaap.com</a>
+                            </span>
+                        </p>
+                    </div>
+                    <div class="logo__dizaap">
+                        <span></span>
+                    </div>
+                    <div class="smart__contacts">
+                        <span></span>
+                        <span>smartflower</span>
                     </div>
                 </div>
             </section>
         </div>
     </div>
+    <form class="b-popup" id="popup1">
+        <div class="blur"></div>
+        <div class="b-popup-content">
+            <div class="callback__form">
+                <div class="callback__title">
+                    <h4>Наш специалист свяжется с вами</h4>
+                    <a href="javascript:PopUpHide()">x</a>
+                </div>
+                <ul class="callback__input">
+                    <li>
+                        <span>Как вас зовут?</span>
+                        <span class="char__input char__input-1">        &#9998;</span>
+                        <input type="text" placeholder="имя">
+                    </li>
+                    <li>
+                        <span>Введите ваш номер телефона</span>
+                        <span class="char__input char__input-2">&#9742;
+                        </span>
+                        <input type="text" placeholder="телефон">
+                    </li>
+                </ul>
+                <button class="callback__button button">
+                    Оставить заявку
+                </button>
+            </div>
+        </div>
+    </form>
     <script src="scripts/compiled.js"></script>
+    <script>
+    $(function() {
+        $('#slides').slidesjs({
+            play: {
+                active: true,
+                auto: true,
+                interval: 9000,
+                swap: true
+            }
+        });
+    });
+    </script>
 </body>
 
 </html>
