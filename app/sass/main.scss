@@ -19,15 +19,18 @@
 }
 
 
-/*------------- header -------------*/
+/*------------- section 1 -------------*/
 
-.header {
+#section1 {
     background-image: url('../img/1st-page.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: right;
     color: white;
     font-weight: bold;
+    .container {
+        position: relative;
+    }
 }
 
 .header__top {
@@ -167,26 +170,50 @@
 
 /*------------- section2 video -------------*/
 
-.section2 {
+#section2 {
     @include clearfix;
     box-sizing: border-box;
+    // &:before {
+    //     content: '';
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     right: 0;
+    //     height: 47%;
+    //     width: 100%;
+    //     display: block;
+    // }
+    // &:after {
+    //     content: '';
+    //     position: absolute;
+    //     bottom: 50px;
+    //     left: 0;
+    //     right: 0;
+    //     height: 40%;
+    //     width: 100%;
+    //     display: block;
+    // }
     &:before {
         content: '';
         position: absolute;
         top: 0;
         left: 0;
-        right: 0;
-        height: 47%;
-        width: 100%;
+        bottom: 50px;
+        // height: 100%;
+        width: 61%;
+        display: block;
+        z-index: 100;
     }
     &:after {
         content: '';
         position: absolute;
+        top: 0;
         bottom: 50px;
-        left: 0;
         right: 0;
-        height: 40%;
-        width: 100%;
+        // height: 100%;
+        width: 36%;
+        display: block;
+        z-index: 100;
     }
 }
 
@@ -218,18 +245,17 @@
     width: 75%;
     height: 100%;
     float: left;
-    box-shadow: 0 0 50px rgba(#000, .3);
 }
 
 
 /*------------- section 3 slider-------------*/
 
-.section3 {
+#section3 {
     text-align: center;
     background-image: url(../img/header_bg.jpg);
-    background-attachment: fixed;
     background-position: right bottom;
     background-size: cover;
+    z-index: 50;
     &:before {
         content: '';
         position: absolute;
@@ -239,6 +265,13 @@
         right: 0;
         background-color: rgba(#fff, 0.75);
     }
+}
+
+.slide {
+    @include clearfix;
+    padding: 0;
+    margin: 0;
+    text-align: top;
 }
 
 .slider__teaser {
@@ -256,7 +289,6 @@
 }
 
 .slider__img {
-    margin-top: 50px;
     display: inline-block;
     border-radius: 150px;
     height: 250px;
@@ -269,6 +301,32 @@
     font-size: 18px;
 }
 
+.fp-tableCell {
+    vertical-align: top;
+}
+
+.fp-next {
+    right: 10% !important;
+}
+
+.fp-prev {
+    left: 10% !important;
+}
+
+// #section3:after {
+//     // background-color: #000 !important;
+//     display: block;
+//     position: absolute;
+//     width: 200px;
+//     background: linear-gradient(to right, #c7c7c7, rgba(0, 0, 0, 0));
+//     top: 0;
+//     bottom: 0;
+//     left: 0;
+//     height: 100%;
+//     z-index: 5555;
+// }
+
+/*
 #slides {
     display: none
 }
@@ -280,18 +338,7 @@ a.slidesjs-stop {
     display: block;
     overflow: hidden;
     text-indent: -9999px;
-    z-index: 40;
-}
-
-a.slidesjs-previous {
-    display: block;
-    position: absolute;
-    width: 200px;
-    background: linear-gradient(to right, #c7c7c7, rgba(0, 0, 0, 0));
-    top: 0;
-    bottom: 0;
-    left: 0;
-    height: 100%;
+    // z-index: 40;
 }
 
 a.slidesjs-previous:before {
@@ -363,7 +410,7 @@ a.slidesjs-next:hover:before {
     width: 100px;
     margin-bottom: 50px;
     list-style: none;
-    z-index: 50;
+    // z-index: 50;
 }
 
 .slidesjs-pagination li {
@@ -391,10 +438,12 @@ a.slidesjs-next:hover:before {
     background-position: 0 -26px
 }
 
+*/
+
 
 /*------------- section4 -------------*/
 
-.section4 {
+#section4 {
     background-color: #F8F6F7;
     padding-top: 30px;
     h3 {
@@ -433,12 +482,11 @@ a.slidesjs-next:hover:before {
 
 /*------------- section5 -------------*/
 
-.footer {
+#section5 {
     text-align: center;
     background-image: url(../img/last-page.jpg);
-    background-position: right bottom;
+    background-position: bottom center;
     background-size: cover;
-    padding: 50px 0;
     .container {
         position: relative;
     }
@@ -503,7 +551,7 @@ a.slidesjs-next:hover:before {
 
 .logo__dizaap {
     position: absolute;
-    bottom: 0;
+    bottom: 4%;
     left: 0;
     right: 0;
     margin: auto;
@@ -519,135 +567,124 @@ a.slidesjs-next:hover:before {
 
 /*------------- hidden form -------------*/
 
-.b-popup {
-    display: none;
-}
+// .b-popup {
+//     display: none;
+// }
+// .b-popup {
+//     background-color: #c5c5c5;
+// }
+// .b-popup {
+//     width: 100%;
+//     min-height: 100%;
+//     background-color: rgba(0, 0, 0, 0.5);
+//     overflow: hidden;
+//     position: fixed;
+//     top: 0px;
+//     // z-index: 5;
+// }
+// .blur {
+//     display: block;
+//     position: absolute;
+//     // width: 120%;
+//     // min-height: 120%;
+//     top: 0;
+//     bottom: -50px;
+//     left: -50px;
+//     right: -50px;
+//     filter: blur(25px);
+//     // z-index: 1;
+//     background-image: url('../img/1st-page.jpg');
+//     background-position: center;
+//     background-size: cover;
+// }
+// .b-popup-content {
+//     display: block;
+//     position: absolute;
+//     max-width: 450px;
+//     min-width: 320px;
+//     left: 0;
+//     right: 0;
+//     top: 50%;
+//     transform: translateY(-50%);
+//     margin: auto;
+//     // z-index: 500;
+//     border-radius: 5px;
+// }
+// .callback__title {
+//     display: block;
+//     vertical-align: middle;
+//     margin: 0;
+//     padding: 0;
+//     padding: 10px;
+//     @include clearfix;
+//     h4 {
+//         display: inline-block;
+//         position: relative;
+//         margin: 0;
+//         font-size: 22px;
+//         color: #fff;
+//         width: 90%;
+//         line-height: 25px;
+//         padding-left: 10px;
+//         top: 50%;
+//         font-weight: 600;
+//         transition: translateY(-50%);
+//     }
+//     a {
+//         float: right;
+//         font-size: 15px;
+//         color: $red-color;
+//         text-transform: uppercase;
+//         margin: -3px -3px;
+//         padding: 7px 15px;
+//         background-color: #fff;
+//         border-radius: 50px;
+//         &:hover {
+//             color: #fff;
+//             background-color: rgba(#c7c7c7, .1) !important;
+//         }
+//     }
+// }
+// .callback__input {
+//     padding: 20px 40px;
+//     position: relative;
+//     li {
+//         margin-bottom: 20px;
+//     }
+// }
+// .char__input {
+//     position: absolute;
+//     margin-left: 10px;
+//     margin-top: -3px;
+//     font-size: 30px !important;
+// }
+// .callback__form {
+//     font-size: 18px;
+//     vertical-align: middle;
+//     // z-index: 500;
+//     input {
+//         padding: 8px 70px;
+//         font-size: 18px;
+//         display: block;
+//         border-radius: 5px;
+//         width: 100%;
+//         background-color: rgba(#fff, .4);
+//         &:nth-child(2) {
+//             margin-bottom: 20px;
+//         }
+//     }
+//     span {
+//         display: block;
+//         font-size: 15px;
+//         color: #fff;
+//     }
+//     button {
+//         margin: 30px 20px 0 0;
+//         float: right;
+//     }
+// }
 
-.b-popup {
-    background-color: #c5c5c5;
-}
-
-.b-popup {
-    width: 100%;
-    min-height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    overflow: hidden;
-    position: fixed;
-    top: 0px;
-    z-index: 5;
-}
-
-.blur {
-    display: block;
-    position: absolute;
-    // width: 120%;
-    // min-height: 120%;
-    top: 0;
-    bottom: -50px;
-    left: -50px;
-    right: -50px;
-    filter: blur(25px);
-    z-index: 1;
-    background-image: url('../img/1st-page.jpg');
-    background-position: center;
-    background-size: cover;
-}
-
-.b-popup-content {
-    display: block;
-    position: absolute;
-    z-index: 222;
-    max-width: 450px;
-    min-width: 320px;
-    left: 0;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    margin: auto;
-    z-index: 500;
-    z-index: 10;
-    border-radius: 5px;
-}
-
-.callback__title {
-    display: block;
-    vertical-align: middle;
-    margin: 0;
-    padding: 0;
-    padding: 10px;
-    @include clearfix;
-    h4 {
-        display: inline-block;
-        position: relative;
-        margin: 0;
-        font-size: 22px;
-        color: #fff;
-        width: 90%;
-        line-height: 25px;
-        padding-left: 10px;
-        top: 50%;
-        font-weight: 600;
-        transition: translateY(-50%);
-    }
-    a {
-        float: right;
-        font-size: 15px;
-        color: $red-color;
-        text-transform: uppercase;
-        margin: -3px -3px;
-        padding: 7px 15px;
-        background-color: #fff;
-        border-radius: 50px;
-        &:hover {
-            color: #fff;
-            background-color: rgba(#c7c7c7, .1) !important;
-        }
-    }
-}
-
-.callback__input {
-    padding: 20px 40px;
-    position: relative;
-    li {
-        margin-bottom: 20px;
-    }
-}
-
-.char__input {
-    position: absolute;
-    margin-left: 10px;
-    margin-top: -3px;
-    font-size: 30px !important;
-}
-
-.callback__form {
-    font-size: 18px;
-    vertical-align: middle;
-    z-index: 500;
-    input {
-        padding: 8px 70px;
-        font-size: 18px;
-        display: block;
-        border-radius: 5px;
-        width: 100%;
-        background-color: rgba(#fff, .4);
-        &:nth-child(2) {
-            margin-bottom: 20px;
-        }
-    }
-    span {
-        display: block;
-        font-size: 15px;
-        color: #fff;
-    }
-    button {
-        margin: 30px 20px 0 0;
-        float: right;
-    }
-}
-
-
-/*------------- \\\\\ -------------*/
+/*------------- modal test -------------*/
 
 html.remodal-is-locked {
     overflow: hidden;
@@ -660,7 +697,7 @@ html.remodal-is-locked {
 
 .remodal-overlay {
     position: fixed;
-    z-index: 9999;
+    // z-index: 9999;
     top: -5000px;
     right: -5000px;
     bottom: -5000px;
@@ -670,7 +707,7 @@ html.remodal-is-locked {
 
 .remodal-wrapper {
     position: fixed;
-    z-index: 10000;
+    // z-index: 10000;
     top: 0;
     right: 0;
     bottom: 0;
@@ -697,9 +734,6 @@ html.remodal-is-locked {
 .remodal {
     position: relative;
     outline: none;
-    -webkit-text-size-adjust: 100%;
-    -moz-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
     text-size-adjust: 100%;
 }
 
@@ -712,7 +746,6 @@ html.remodal-is-locked {
 
 .remodal-bg.remodal-is-opening,
 .remodal-bg.remodal-is-opened {
-    -webkit-filter: blur(3px);
     filter: blur(3px);
 }
 
@@ -722,17 +755,14 @@ html.remodal-is-locked {
 
 .remodal-overlay.remodal-is-opening,
 .remodal-overlay.remodal-is-closing {
-    -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
 }
 
 .remodal-overlay.remodal-is-opening {
-    -webkit-animation: remodal-overlay-opening-keyframes 0.3s;
     animation: remodal-overlay-opening-keyframes 0.3s;
 }
 
 .remodal-overlay.remodal-is-closing {
-    -webkit-animation: remodal-overlay-closing-keyframes 0.3s;
     animation: remodal-overlay-closing-keyframes 0.3s;
 }
 
@@ -741,16 +771,13 @@ html.remodal-is-locked {
 }
 
 .remodal {
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     width: 99.2%;
     padding: .8%;
-    -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
     color: #2b2e38;
     background: #2f3847;
     margin-bottom: 10px;
-    font-family: 'Roboto', sans-serif;
     overflow: hidden;
 }
 
@@ -762,17 +789,14 @@ html.remodal-is-locked {
 
 .remodal.remodal-is-opening,
 .remodal.remodal-is-closing {
-    -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
 }
 
 .remodal.remodal-is-opening {
-    -webkit-animation: remodal-opening-keyframes 0.3s;
     animation: remodal-opening-keyframes 0.3s;
 }
 
 .remodal.remodal-is-closing {
-    -webkit-animation: remodal-closing-keyframes 0.3s;
     animation: remodal-closing-keyframes 0.3s;
 }
 
@@ -792,7 +816,6 @@ html.remodal-is-locked {
     margin: 0;
     padding: 0;
     cursor: pointer;
-    -webkit-transition: color 0.2s;
     transition: color 0.2s;
     text-decoration: none;
     color: #95979c;
@@ -827,7 +850,6 @@ html.remodal-is-locked {
     margin: 0;
     padding: 12px 0;
     cursor: pointer;
-    -webkit-transition: background 0.2s;
     transition: background 0.2s;
     text-align: center;
     vertical-align: middle;
@@ -865,12 +887,10 @@ html.remodal-is-locked {
 
 @-webkit-keyframes remodal-opening-keyframes {
     from {
-        -webkit-transform: scale(1.05);
         transform: scale(1.05);
         opacity: 0;
     }
     to {
-        -webkit-transform: none;
         transform: none;
         opacity: 1;
     }
@@ -878,12 +898,10 @@ html.remodal-is-locked {
 
 @keyframes remodal-opening-keyframes {
     from {
-        -webkit-transform: scale(1.05);
         transform: scale(1.05);
         opacity: 0;
     }
     to {
-        -webkit-transform: none;
         transform: none;
         opacity: 1;
     }
@@ -891,12 +909,10 @@ html.remodal-is-locked {
 
 @-webkit-keyframes remodal-closing-keyframes {
     from {
-        -webkit-transform: scale(1);
         transform: scale(1);
         opacity: 1;
     }
     to {
-        -webkit-transform: scale(0.95);
         transform: scale(0.95);
         opacity: 0;
     }
@@ -904,12 +920,10 @@ html.remodal-is-locked {
 
 @keyframes remodal-closing-keyframes {
     from {
-        -webkit-transform: scale(1);
         transform: scale(1);
         opacity: 1;
     }
     to {
-        -webkit-transform: scale(0.95);
         transform: scale(0.95);
         opacity: 0;
     }
@@ -1010,26 +1024,39 @@ html.remodal-is-locked {
     }
 }
 
-// @media only screen and (max-width: 439px) {
-//     .remodal {
-//         max-width: 100%;
-//     }
-//     .putName,
-//     .putPhone {
-//         width: 90%;
-//         height: 80px;
-//         font-size: 22px;
-//     }
-//     .btn {
-//         width: 96%;
-//         height: 82px;
-//         font-size: 22px;
-//     }
-// }
 .lt-ie9 .remodal-overlay {
     background: #2b2e38;
 }
 
 .lt-ie9 .remodal {
     width: 420px;
+}
+
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+    background-color: $c10;
+}
+
+.hamburger {
+    color: $c3;
+    cursor: pointer;
+    &:hover {
+        color: $c12;
+    }
+}
+
+.overlay-content ul {
+    margin-top: 30px;
+    color: $c3;
+}
+
+#arrow {
+    animation: bounce 1s infinite;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 10px;
+    margin: auto;
+    display: block;
+    width: 10px;
 }

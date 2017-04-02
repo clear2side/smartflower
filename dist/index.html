@@ -9,186 +9,343 @@
     <meta name="keywords" content="sun, energy, economy, technology, smartflower">
     <link rel="stylesheet" href="css/compiled.css">
 </head>
+<style>
+li {
+    list-style: none;
+}
+
+.color {
+    background-color: pink;
+}
+
+.nav {
+    position: fixed;
+    top: 25px;
+    right: 50px;
+    z-index: 200;
+}
+
+@keyframes bounce {
+    0% {
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    50% {
+        -moz-transform: translateY(5px);
+        -ms-transform: translateY(5px);
+        -webkit-transform: translateY(5px);
+        transform: translateY(5px);
+    }
+    100% {
+        -moz-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+#arrow {
+    -moz-animation: bounce 1s infinite;
+    -webkit-animation: bounce 1s infinite;
+    animation: bounce 1s infinite;
+}
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+    color: #f1f1f1;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+.close {
+    width: 0%;
+}
+
+.open {
+    width: 100%;
+}
+
+@media screen and (max-height: 450px) {
+    .overlay a {
+        font-size: 20px
+    }
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+</style>
 
 <body>
-    <div class="wrapper">
-        <div class="visible__page">
-            <section data-section="section1" class="page header">
-                <div class="container">
-                    <div class="header__top">
-                        <div class="header__logo">
-                            <a class="logo__link" href="#">
-                                <span class="logo__icon"></span>
-                                <span class="logo__title">Smartflower</span>
-                            </a>
-                        </div>
-                        <div class="header__tel">+38 (068) 021 21 21</div>
+    <div id="myNav" class="overlay close">
+        <!--<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>-->
+        <div class="overlay-content">
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Clients</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
+    <!--Top Nav Bar Here-->
+    <div class="row nav">
+        <div class="hamburger hamburger--collapse" type="button" style="position:relative; height: 75px; width: 75px; font-size: 60px; " onclick="">&#9743
+        </div>
+    </div>
+    <!--End Top Nav Bar-->
+    <!--Place all content within container-fluid div below -->
+    <div class="container-fluid" id="fullpage">
+        <section class="section" id="section1">
+            <div class="container">
+                <div class="header__top">
+                    <div class="header__logo">
+                        <a class="logo__link" href="#">
+                            <span class="logo__icon"></span>
+                            <span class="logo__title">Smartflower</span>
+                        </a>
                     </div>
-                    <div class="header__description">
-                        <h3 class="description__title">Генерируйте энергию.</h1>
+                    <!-- <div class="header__tel">+38 (068) 021 21 21</div> -->
+                </div>
+                <div class="header__description">
+                    <h3 class="description__title">Генерируйте энергию.</h1>
                         <h3 class="description__title">Храните энергию.</h2>
                         <h3 class="description__title">Живите в свое удовольствие.</h3>
-                        <div class="description-tabs__wrapper">
-                            <ul class="description__tabs tabs">
-                                <li class="tab"> Свобода</li>
-                                <li class="tab"> Практичность </li>
+                    <div class="description-tabs__wrapper">
+                        <ul class="description__tabs tabs">
+                            <li class="tab"> Свобода</li>
+                            <li class="tab"> Практичность </li>
+                        </ul>
+                        <div class="tab_content">
+                            <ul class="tab_item">
+                                <li>
+                                    <span class="dt1"></span>
+                                    <span>Установка за 1 час</span>
+                                </li>
+                                <li>
+                                    <span class="dt2"></span>
+                                    <span>Ваша независимость от энергосетей и посредников</span>
+                                </li>
+                                <li>
+                                    <span class="dt3"></span>
+                                    <span>Самообслуживаемость</span>
+                                </li>
                             </ul>
-                            <div class="tab_content">
-                                <ul class="tab_item">
-                                    <li>
-                                        <span class="dt1"></span>
-                                        <span>Установка за 1 час</span>
-                                    </li>
-                                    <li>
-                                        <span class="dt2"></span>
-                                        <span>Ваша независимость от энергосетей и посредников</span>
-                                    </li>
-                                    <li>
-                                        <span class="dt3"></span>
-                                        <span>Самообслуживаемость</span>
-                                    </li>
-                                </ul>
-                                <ul class="tab_item">
-                                    <li>
-                                        <span class="dt4"></span>
-                                        <span>Производит на 60% больше</span>
-                                    </li>
-                                    <li>
-                                        <span class="dt5"></span>
-                                        <span>Портативность(снял перевез с собой)</span>
-                                    </li>
-                                    <li>
-                                        <span class="dt6"></span>
-                                        <span>Хранение запаса енергии</span>
-                                    </li>
-                                </ul>
-                                <a class="mainButton" href="#modal">
-                                    <button class="description__tabs--button button">узнать больше</button>
-                                </a>
-                            </div>
+                            <ul class="tab_item">
+                                <li>
+                                    <span class="dt4"></span>
+                                    <span>Производит на 60% больше</span>
+                                </li>
+                                <li>
+                                    <span class="dt5"></span>
+                                    <span>Портативность(снял перевез с собой)</span>
+                                </li>
+                                <li>
+                                    <span class="dt6"></span>
+                                    <span>Хранение запаса енергии</span>
+                                </li>
+                            </ul>
+                            <a class="mainButton" href="#modal">
+                                <button class="description__tabs--button button">узнать больше</button>
+                            </a>
                         </div>
                     </div>
                 </div>
-            </section>
-            <section data-section="section2" class="page section2">
-                <div class="video__description">
-                    <span>
+            </div>
+        </section>
+        <section class="section" id="section2">
+            <div class="video__description">
+                <span>
                     <h4>Видео</h4>
                     <p>Полностью интегрированная<br> солнечная система<br>"все в одном" которую можно подключить<br>и ввести в экстплуатацию так<br>просто, как обычный<br>бытoвой прибор.</p>
                     </span>
+            </div>
+            <div class="video__wrap">
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/WuZFG1R0hyY?rel=0&amp;controls=1" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </section>
+        <section class="section" id="section3">
+            <h3 class="slider__teaser">5 причин приобрести Smartflower</h3>
+            <div class="slide" id="slide2-1">
+                <img class="slider__img" src="img/slider__img/slider-1.jpg" alt="energy">
+                <div class="carousel-caption">
+                    <p>Цельная солнечная система со встроенным аккумулятором и простой и легкой установкой (включи и работай).
+                        <br>Полностью интегрировання солнечная система "все в одном", которую можно подключить и ввести в эксплуатацию так просто, как обычный бытовой прибор.</p>
                 </div>
-                <div class="video__wrap">
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/WuZFG1R0hyY?rel=0&amp;controls=1" data-autoplay frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="slide" id="slide2-2">
+                <img class="slider__img" src="img/slider__img/slider-2.jpg" alt="economy">
+                <div class="carousel-caption">
+                    <p>Эффективное производство энергии: система на 40% производительнее статичных солнечных панелей благодаря умному отслеживанию положения Солнца.
+                        <br> С первыми лучами система автоматически начинает работу, чтобы полностью обеспечить ваш дом электроэнергией.</p>
                 </div>
-            </section>
-            <section data-section="section3" class="page section3">
-                <h3 class="slider__teaser">5 причин приобрести Smartflower</h3>
-                <div class="slider__wrap">
-                    <div id="slides">
-                        <div class="item">
-                            <img class="slider__img" src="img/slider__img/slider-1.jpg" alt="energy">
-                            <div class="carousel-caption">
-                                <p>Цельная солнечная система со встроенным аккумулятором и простой и легкой установкой (включи и работай).
-                                    <br>Полностью интегрировання солнечная система "все в одном", которую можно подключить и ввести в эксплуатацию так просто, как обычный бытовой прибор.</p>
-                            </div>
+            </div>
+            <div class="slide" id="slide2-3">
+                <img class="slider__img" src="img/slider__img/slider-3.jpg" alt="sun">
+                <div class="carousel-caption">
+                    <p>Умные системы очистки и охлаждения снижают потери при выработке электроэнергии до 15 процентов - smartflower POP легко очищает себя от отложений пыли или снега, складываясь и раскрываясь.
+                        <br> При постоянной эксплуатации датчики непрерывно следят за скоростью ветра.</p>
+                </div>
+            </div>
+            <div class="slide" id="slide2-4">
+                <img class="slider__img" src="img/slider__img/slider-4.jpg" alt="modern">
+                <div class="carousel-caption">
+                    <p>Вы можете установить Smartflower в саду и забрать с собой при переезде.
+                        <br>Демонтаж smartflower осуществляется так же просто, как и его установка: просто отверните четыре анкерных болта и перевезите его на прицепе. </p>
+                </div>
+            </div>
+            <div class="slide" id="slide2-5">
+                <img class="slider__img" src="img/slider__img/slider-5.jpg" alt="future">
+                <div class="carousel-caption">
+                    <p>Высочайшее качество, производство в Австрии.
+                        <br> своевременная квалифицированная поддержка дистрибьютора.</p>
+                </div>
+            </div>
+            <!--
+
+            <div class="slider__wrap">
+                <div id="slides">
+                    <div class="item">
+                        <img class="slider__img" src="img/slider__img/slider-1.jpg" alt="energy">
+                        <div class="carousel-caption">
+                            <p>Цельная солнечная система со встроенным аккумулятором и простой и легкой установкой (включи и работай).
+                                <br>Полностью интегрировання солнечная система "все в одном", которую можно подключить и ввести в эксплуатацию так просто, как обычный бытовой прибор.</p>
                         </div>
-                        <div class="item">
-                            <img class="slider__img" src="img/slider__img/slider-2.jpg" alt="economy">
-                            <div class="carousel-caption">
-                                <p>Эффективное производство энергии: система на 40% производительнее статичных солнечных панелей благодаря умному отслеживанию положения Солнца.
-                                    <br> С первыми лучами система автоматически начинает работу, чтобы полностью обеспечить ваш дом электроэнергией.</p>
-                            </div>
+                    </div>
+                    <div class="item">
+                        <img class="slider__img" src="img/slider__img/slider-2.jpg" alt="economy">
+                        <div class="carousel-caption">
+                            <p>Эффективное производство энергии: система на 40% производительнее статичных солнечных панелей благодаря умному отслеживанию положения Солнца.
+                                <br> С первыми лучами система автоматически начинает работу, чтобы полностью обеспечить ваш дом электроэнергией.</p>
                         </div>
-                        <div class="item">
-                            <img class="slider__img" src="img/slider__img/slider-3.jpg" alt="sun">
-                            <div class="carousel-caption">
-                                <p>Умные системы очистки и охлаждения снижают потери при выработке электроэнергии до 15 процентов - smartflower POP легко очищает себя от отложений пыли или снега, складываясь и раскрываясь.
-                                    <br> При постоянной эксплуатации датчики непрерывно следят за скоростью ветра.</p>
-                            </div>
+                    </div>
+                    <div class="item">
+                        <img class="slider__img" src="img/slider__img/slider-3.jpg" alt="sun">
+                        <div class="carousel-caption">
+                            <p>Умные системы очистки и охлаждения снижают потери при выработке электроэнергии до 15 процентов - smartflower POP легко очищает себя от отложений пыли или снега, складываясь и раскрываясь.
+                                <br> При постоянной эксплуатации датчики непрерывно следят за скоростью ветра.</p>
                         </div>
-                        <div class="item">
-                            <img class="slider__img" src="img/slider__img/slider-4.jpg" alt="modern">
-                            <div class="carousel-caption">
-                                <p>Вы можете установить Smartflower в саду и забрать с собой при переезде.
-                                    <br>Демонтаж smartflower осуществляется так же просто, как и его установка: просто отверните четыре анкерных болта и перевезите его на прицепе. </p>
-                            </div>
+                    </div>
+                    <div class="item">
+                        <img class="slider__img" src="img/slider__img/slider-4.jpg" alt="modern">
+                        <div class="carousel-caption">
+                            <p>Вы можете установить Smartflower в саду и забрать с собой при переезде.
+                                <br>Демонтаж smartflower осуществляется так же просто, как и его установка: просто отверните четыре анкерных болта и перевезите его на прицепе. </p>
                         </div>
-                        <div class="item">
-                            <img class="slider__img" src="img/slider__img/slider-5.jpg" alt="future">
-                            <div class="carousel-caption">
-                                <p>Высочайшее качество, производство в Австрии.
-                                    <br> своевременная квалифицированная поддержка дистрибьютора.</p>
-                            </div>
+                    </div>
+                    <div class="item">
+                        <img class="slider__img" src="img/slider__img/slider-5.jpg" alt="future">
+                        <div class="carousel-caption">
+                            <p>Высочайшее качество, производство в Австрии.
+                                <br> своевременная квалифицированная поддержка дистрибьютора.</p>
                         </div>
                     </div>
                 </div>
-            </section>
-            <section data-section="section4" class="page section4">
-                <div class="container">
-                    <h3>Наслаждайтесь энергией солнца.</h3>
-                    <h4>Двадцать четыре часа в сутки, почти независимо от электросети.</h4>
-                    <div class="tech__info">
-                        <div class="left__info">
-                            <p>Система генерирует в среднем 4500 кВт*ч в год (3400-6200 кВт*ч в завиимости от региона), что покрывает полную среднюю потребность в электричестве одной семьи в центрально-европейском регионе.
-                                <br> Число циклов аккумулятора - 5000 циклов (50% глубина разрядки)</p>
-                        </div>
-                        <div class="right__info">
-                            <p>Область рабочих температур: от -20*С до +50*С
-                                <br>
-                                <br> Вес системы: около 800 кг
-                                <br>Карантия батареи: 5 лет.
-                                <br>
-                                <br>Все под контролем: Доступен мониторинг и настройка системы при помощи локальной сети, Wi-Fi и веб-интерфейса.</p>
-                        </div>
+            </div>
+             -->
+        </section>
+        <section class="section" id="section4">
+            <div class="container">
+                <h3>Наслаждайтесь энергией солнца.</h3>
+                <h4>Двадцать четыре часа в сутки, почти независимо от электросети.</h4>
+                <div class="tech__info">
+                    <div class="left__info">
+                        <p>Система генерирует в среднем 4500 кВт*ч в год (3400-6200 кВт*ч в завиимости от региона), что покрывает полную среднюю потребность в электричестве одной семьи в центрально-европейском регионе.
+                            <br> Число циклов аккумулятора - 5000 циклов (50% глубина разрядки)</p>
                     </div>
-                    <img class="tech__img" src="img/pop2.png" alt="automaticaly">
+                    <div class="right__info">
+                        <p>Область рабочих температур: от -20*С до +50*С
+                            <br>
+                            <br> Вес системы: около 800 кг
+                            <br>Карантия батареи: 5 лет.
+                            <br>
+                            <br>Все под контролем: Доступен мониторинг и настройка системы при помощи локальной сети, Wi-Fi и веб-интерфейса.</p>
+                    </div>
                 </div>
-            </section>
-            <section data-section="section5" class="page footer">
-                <div class="container">
-                    <div class="footer__request">
-                        <h3>Остались вопросы?</h3>
-                        <a class="mainButton" href="#modal">
-                            <button class="footer__top-button button">
-                                узнать цену</button>
-                        </a>
-                    </div>
-                    <div class="dizaap__contacts">
-                        <p><span>Киев, Украина</span>
-                            <span>ул. Нововокзальная, 3, 9 этаж</span>
-                            <span>ул. Механизаторов, 2, оф. 498</span>
-                        </p>
-                        <br>
-                        <p>+38 (068) 021 21 21</p>
-                        <br>
-                        <p>
-                            <span>
+                <img class="tech__img" src="img/pop2.png" alt="automaticaly">
+            </div>
+        </section>
+        <section class="section" id="section5">
+            <div class="container">
+                <div class="footer__request">
+                    <h3>Остались вопросы?</h3>
+                    <a class="mainButton" href="#modal">
+                        <button class="footer__top-button button">
+                            узнать цену</button>
+                    </a>
+                </div>
+                <div class="dizaap__contacts">
+                    <p><span>Киев, Украина</span>
+                        <span>ул. Нововокзальная, 3, 9 этаж</span>
+                        <span>ул. Механизаторов, 2, оф. 498</span>
+                    </p>
+                    <br>
+                    <p>+38 (068) 021 21 21</p>
+                    <br>
+                    <p>
+                        <span>
                                 <a href="d@dizaap.com">d@dizaap.com</a>
                             </span>
-                            <span>
+                        <span>
                             <a href="www.dizaap.com">www.dizaap.com</a>
                             </span>
-                        </p>
-                    </div>
-                    <div class="logo__dizaap">
-                        <span></span>
-                    </div>
-                    <div class="smart__contacts">
-                        <span></span>
-                        <span>smartflower</span>
-                    </div>
+                    </p>
                 </div>
-            </section>
-        </div>
+                <div class="logo__dizaap">
+                    <span></span>
+                </div>
+                <div class="smart__contacts">
+                    <span></span>
+                    <span>smartflower</span>
+                </div>
+            </div>
+        </section>
     </div>
     <div class="remodal" data-remodal-id="modal" role="dialog" aria-labelledby="modal1Title" aria-describedby="modal1Desc">
         <div class="remodalBorder">
             <p><img src="img/sendico.png"></p>
             <button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
             <form id="form">
-                <h2 id="modal1Title">Оставьте ваши контактные данные и наш консультант свяжется <br>с вами</h2>
-                <input type="text" class="putName" name="name" placeholder="Ваше ваше имя" required>
-                <input name="phone" type="tel" class="putPhone" placeholder="Введите номер телефона" required>
+                <h2 id="modal1Title">Оставьте ваши контактные данные и наш консультант свяжется с вами</h2>
+                <input type="text" class="putName" name="name" placeholder="Ваше имя" required>
+                <input name="phone" type="tel" class="putPhone" placeholder="Номер телефона" required>
                 <input type="submit" name="submit" class="btn" value="ОТПРАВИТЬ">
                 <input type="hidden" name="formData" value="Заявка с сайта">
             </form>
@@ -196,16 +353,34 @@
     </div>
     <script src="scripts/compiled.js"></script>
     <script>
-    $(function() {
-        $('#slides').slidesjs({
-            play: {
-                active: true,
-                auto: true,
-                interval: 9000,
-                swap: true
-            }
+    $(document).ready(function() {
+        $('#fullpage').fullpage({
+            anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
+            menu: '#menu',
+            scrollingSpeed: 1000,
+            navigation: true,
+            navigationPosition: 'right',
+            navigationTooltips: ['Slide 1', 'Slide 2', 'Slide 3'],
         });
+
     });
+
+    var $hamburger = $(".hamburger");
+
+    $hamburger.on("click", function(e) {
+        if ($("#myNav").hasClass("close")) {
+            $("#myNav").removeClass("close");
+            $("#myNav").addClass("open");
+            $hamburger.toggleClass("is-active")
+        } else {
+            $hamburger.toggleClass("is-active");
+            $("#myNav").removeClass("open");
+            $("#myNav").addClass("close");
+        }
+    });
+
+    $.fn.fullpage.setAllowScrolling(true);
+    $.fn.fullpage.reBuild();
     </script>
 </body>
 
