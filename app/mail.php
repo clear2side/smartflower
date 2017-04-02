@@ -1,59 +1,28 @@
 <?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (isset($_POST['name'])) {$name = $_POST['name'];}
+    if (isset($_POST['phone'])) {$phone = $_POST['phone'];}
+    if (isset($_POST['formData'])) {$formData = $_POST['formData'];}
 
-// Define contact information
-define( 'RECIPIENT_NAME', 'John Smith' );
-define( 'RECIPIENT_EMAIL', 'john@example.com' );
-
-// Define response markup classNames
-define('NAME_ERROR', '.is-name');
-define('EMAIL_ERROR', '.is-email');
-define('SUBJECT_ERROR', '.is-subject');
-define('MESSAGE_ERROR', '.is-message');
-define('AJAX_ERROR', '.is-ajax');
-define('SUCCESS', '.is-success');
-
-// Read and filter the form values
-$success = false;
-$name = isset( $_POST['name'] ) ? filter_var($_POST['name'], FILTER_SANITIZE_STRING): '';
-$email = isset( $_POST['email'] ) ? filter_var($_POST['email'], FILTER_SANITIZE_EMAIL): '';
-$subject = isset( $_POST['subject'] ) ? filter_var($_POST['subject'], FILTER_SANITIZE_STRING): '';
-$message = isset( $_POST['message'] ) ? filter_var($_POST['message'], FILTER_SANITIZE_STRING): '';
-
-// Additional php validation: on error return in json className of message to show
-// If length is less than 1 or greater than 100 it will respond JSON error.
-if(strlen($name)<2 || strlen($name)>100){
-	$response = json_encode(array('type'=>'error', 'className' => NAME_ERROR));
-	die($response);
-}
-// Email validation
-if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
-	$response = json_encode(array('type'=>'error', 'className' => EMAIL_ERROR));
-	die($response);
-}
-// Check for emtpy or too short subject
-if(strlen($subject)<3){
-	$response = json_encode(array('type'=>'error', 'className' => SUBJECT_ERROR));
-	die($response);
-}
-// Check for emtpy or too short message
-if(strlen($message)<3){
-	$response = json_encode(array('type'=>'error', 'className' => MESSAGE_ERROR));
-	die($response);
-}
-
-// If all values exist, send the email
-if ( $name && $email && $subject && $message ) {
-  $recipient = RECIPIENT_NAME . ' <' . RECIPIENT_EMAIL . '>';
-  $headers = 'From: ' . $name . ' <' . $email . '>';
-  $mail = mail( $recipient, $subject, $message, $headers );
-}
-
-// Return an appropriate response to the browser
-if ( isset($_GET['ajax']) ) {
-	$response = json_encode(array('type'=>'success', 'className' => SUCCESS));
-	die($response);
-} else {	
-	$response = json_encode(array('type'=>'error', 'className' => AJAX_ERROR));
-	die($response);
+    $to = "sitename@yandex.ru"; /*Укажите адрес, га который должно приходить письмо*/
+    $sendfrom   = "smart-landing@yandex.ru"; /*Укажите адрес, с которого будет приходить письмо, можно не настоящий, нужно для формирования заголовка письма*/
+    $headers  = "From: " . strip_tags($sendfrom) . "\r\n";
+    $headers .= "Reply-To: ". strip_tags($sendfrom) . "\r\n";
+    $headers .= "MIME-Version: 1.0\r\n";
+    $headers .= "Content-Type: text/html;charset=utf-8 \r\n";
+    $subject = "$formData";
+    $message = "$formData<br> <b>Имя пославшего:</b> $name <br><b>Телефон:</b> $phone";
+    $send = mail ($to, $subject, $message, $headers);
+    if ($send == 'true')
+    {
+    echo '<center><p class="success">Спасибо за отправку вашего сообщения!</p></center>';
+    }
+    else 
+    {
+    echo '<center><p class="fail"><b>Ошибка. Сообщение не отправлено!</b></p></center>';
+    }
+} else {
+    http_response_code(403);
+    echo "Попробуйте еще раз";
 }
 ?>

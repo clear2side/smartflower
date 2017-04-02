@@ -1,9 +1,4 @@
 $(document).ready(function() {
-
-    /*------------- mousewheel (скрол) -------------*/
-    //Скрыть PopUp при загрузке страницы
-    PopUpHide();
-    /*------- сайт скролиться по 100% секциям ------*/
     var
         screen = 0,
         container = $('.visible__page'),
@@ -37,26 +32,28 @@ $(document).ready(function() {
     })
 });
 
-//Функция отображения PopUp
-function PopUpShow() {
-    $("#popup1").show();
-}
-//Функция скрытия PopUp
-function PopUpHide() {
-    $("#popup1").hide();
-}
-
 $("form").submit(function() {
+    // Получение ID формы
+    var formID = $(this).attr('id');
+    // Добавление решётки к имени ID
+    var formNm = $('#' + formID);
     $.ajax({
-        type: "GET",
-        url: "mail.php",
-        data: $("form").serialize()
-    }).done(function() {
-        alert("Спасибо за заявку!");
-        setTimeout(function() {}, 1000);
+        type: "POST",
+        url: 'mail.php',
+        data: formNm.serialize(),
+        success: function(data) {
+            // Вывод текста результата отправки
+            $(formNm).html(data);
+        },
+        error: function(jqXHR, text, error) {
+            // Вывод текста ошибки отправки
+            $(formNm).html(error);
+        }
     });
     return false;
 });
+
+/*-------------  -------------*/
 
 $(".header__description .tab_item").not(":first").hide();
 $(".header__description .description-tabs__wrapper .tab").click(function() {

@@ -6,6 +6,7 @@
     <title>Smartflower</title>
     <link rel="shortcut icon" href="img/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="sun, energy, economy, technology, smartflower">
     <!-- build:css css/compiled.css -->
     <link rel="stylesheet" href="css/main.css">
     <!-- endbuild -->
@@ -63,7 +64,7 @@
                                         <span>Хранение запаса енергии</span>
                                     </li>
                                 </ul>
-                                <a href="javascript:PopUpShow()">
+                                <a class="mainButton" href="#modal">
                                     <button class="description__tabs--button button">узнать больше</button>
                                 </a>
                             </div>
@@ -149,7 +150,7 @@
                 <div class="container">
                     <div class="footer__request">
                         <h3>Остались вопросы?</h3>
-                        <a href="javascript:PopUpShow()">
+                        <a class="mainButton" href="#modal">
                             <button class="footer__top-button button">
                                 узнать цену</button>
                         </a>
@@ -182,37 +183,24 @@
             </section>
         </div>
     </div>
-    <form class="b-popup" id="popup1">
-        <div class="blur"></div>
-        <div class="b-popup-content">
-            <div class="callback__form">
-                <div class="callback__title">
-                    <h4>Наш специалист свяжется с вами</h4>
-                    <a href="javascript:PopUpHide()">x</a>
-                </div>
-                <ul class="callback__input">
-                    <li>
-                        <span>Как вас зовут?</span>
-                        <span class="char__input char__input-1">        &#9998;</span>
-                        <input type="text" placeholder="имя">
-                    </li>
-                    <li>
-                        <span>Введите ваш номер телефона</span>
-                        <span class="char__input char__input-2">&#9742;
-                        </span>
-                        <input type="text" placeholder="телефон">
-                    </li>
-                </ul>
-                <button class="callback__button button">
-                    Оставить заявку
-                </button>
-            </div>
+    <div class="remodal" data-remodal-id="modal" role="dialog" aria-labelledby="modal1Title" aria-describedby="modal1Desc">
+        <div class="remodalBorder">
+            <p><img src="img/sendico.png"></p>
+            <button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
+            <form id="form">
+                <h2 id="modal1Title">Оставьте ваши контактные данные и наш консультант свяжется с вами</h2>
+                <input type="text" class="putName" name="name" placeholder="Ваше имя" required>
+                <input name="phone" type="tel" class="putPhone" placeholder="Номер телефона" required>
+                <input type="submit" name="submit" class="btn" value="ОТПРАВИТЬ">
+                <input type="hidden" name="formData" value="Заявка с сайта">
+            </form>
         </div>
-    </form>
+    </div>
     <!-- build:js scripts/compiled.js -->
     <script src="libs/jquery/dist/jquery.js"></script>
     <script src="libs/jquery-mousewheel/jquery.mousewheel.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/remodal.min.js"></script>
     <script src="js/slider.js"></script>
     <!-- endbuild -->
     <script>
