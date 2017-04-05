@@ -186,6 +186,9 @@
     .hamburger {
         display: none;
     }
+    .remodal {
+        max-width: 420px;
+    }
 }
 
 
@@ -198,19 +201,19 @@
     .video__description {
         display: none !important;
     }
+    .video__wrap {
+        width: 100% !important;
+    }
     .slidesjs-container {
         height: 480px !important;
     }
-    .slider__teaser {
-        display: none !important;
-    }
+    .slider__teaser {}
     .slider__img {
-        margin-top: 20px !important;
         max-height: 150px;
+        margin: 0% !important;
     }
     .carousel-caption {
         font-size: 14px !important;
-        margin-top: 15px !important;
     }
     .slidesjs-pagination {
         bottom: 0% !important;
@@ -245,6 +248,14 @@
             }
         }
     }
+    .overlay a {
+        font-size: 20px
+    }
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
 }
 
 @media only screen and (max-height: 600px) {
@@ -267,9 +278,6 @@
     .slidesjs-container {
         height: 600px !important;
     }
-    .slider__img {
-        margin-top: 0px !important;
-    }
     #section4 {
         h3 {
             font-size: 30px;
@@ -287,9 +295,6 @@
 @media only screen and (max-height: 800px) {
     .slidesjs-container {
         height: 800px !important;
-        .slider__img {
-            margin-top: 0px !important;
-        }
     }
 }
 
