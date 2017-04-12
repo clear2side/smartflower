@@ -13,6 +13,7 @@ var gulp = require('gulp'),
     useref = require('gulp-useref'),
     gulpif = require('gulp-if'),
     minifyCss = require('gulp-clean-css');
+uncss = require('gulp-uncss')
 
 gulp.task('sass', function() {
     return gulp.src('app/sass/**/*.+(sass|scss)')
@@ -22,7 +23,13 @@ gulp.task('sass', function() {
         .pipe(browserSync.reload({ stream: true }))
 });
 
-
+gulp.task('uncss', function() {
+    return gulp.src('app/css/main.css')
+        .pipe(uncss({
+            html: ['app/index.html']
+        }))
+        .pipe(gulp.dest('dist/css/compiled1.css'));
+});
 
 gulp.task('clean', function() {
     return del.sync('dist');

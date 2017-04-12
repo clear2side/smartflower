@@ -641,7 +641,11 @@ an absolute positioned element -------------*/
   font-size: 50px;
   float: left;
   font-weight: 700;
-  display: block; }
+  display: block;
+  -webkit-animation: fadeInDown 1s ease-out;
+     -moz-animation: fadeInDown 1s ease-out;
+       -o-animation: fadeInDown 1s ease-out;
+          animation: fadeInDown 1s ease-out; }
 
 .logo__icon {
   display: inline-block;
@@ -677,7 +681,11 @@ an absolute positioned element -------------*/
 .description-tabs__wrapper {
   font-weight: 300;
   margin-top: 2%;
-  max-width: 630px; }
+  max-width: 630px;
+  -webkit-animation: zoomInUp 1s ease-out;
+     -moz-animation: zoomInUp 1s ease-out;
+       -o-animation: zoomInUp 1s ease-out;
+          animation: zoomInUp 1s ease-out; }
 
 .description__tabs {
   padding: 0; }
@@ -1036,7 +1044,6 @@ html.remodal-is-locked {
 .remodal-is-initialized {
   display: inline-block; }
 
-/*------------- ///// -------------*/
 .remodal-bg.remodal-is-opening,
 .remodal-bg.remodal-is-opened {
   -webkit-filter: blur(8px);
@@ -1074,7 +1081,6 @@ html.remodal-is-locked {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
-  padding: .8%;
   -webkit-transform: translate3d(0, 0, 0);
      -moz-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
@@ -1339,7 +1345,6 @@ html.remodal-is-locked {
 
 #modal1Title {
   font-size: 18px;
-  max-width: 400px;
   font-weight: bold;
   color: #333;
   text-shadow: 1px 1px 1px rgba(199, 217, 231, 0.7); }
@@ -1347,11 +1352,10 @@ html.remodal-is-locked {
 .putName,
 .putPhone {
   display: block;
-  width: 80%;
+  width: 100%;
   padding: 0px 15px;
   height: 40px;
   background: #fff;
-  margin-bottom: 15px;
   -webkit-border-radius: 2px;
      -moz-border-radius: 2px;
           border-radius: 2px;
@@ -1360,7 +1364,7 @@ html.remodal-is-locked {
   margin: 20px auto; }
 
 .btn {
-  width: 210px;
+  width: 80%;
   height: 42px;
   background: #981818;
   margin-bottom: 15px;
@@ -1396,10 +1400,10 @@ html.remodal-is-locked {
   color: #f2e6cd; }
 
 #arrow {
-  -webkit-animation: bounce 1s infinite;
-     -moz-animation: bounce 1s infinite;
-       -o-animation: bounce 1s infinite;
-          animation: bounce 1s infinite;
+  -webkit-animation: slowbounce 1s infinite;
+     -moz-animation: slowbounce 1s infinite;
+       -o-animation: slowbounce 1s infinite;
+          animation: slowbounce 1s infinite;
   position: absolute;
   left: 0;
   right: 0;
@@ -1421,7 +1425,7 @@ li {
   right: 50px;
   z-index: 200; }
 
-@-webkit-keyframes bounce {
+@-webkit-keyframes slowbounce {
   0% {
     -moz-transform: translateY(0);
     -ms-transform: translateY(0);
@@ -1439,7 +1443,7 @@ li {
     -webkit-transform: translateY(0);
     transform: translateY(0); } }
 
-@-moz-keyframes bounce {
+@-moz-keyframes slowbounce {
   0% {
     -moz-transform: translateY(0);
     -ms-transform: translateY(0);
@@ -1457,7 +1461,7 @@ li {
     -webkit-transform: translateY(0);
     transform: translateY(0); } }
 
-@-o-keyframes bounce {
+@-o-keyframes slowbounce {
   0% {
     -moz-transform: translateY(0);
     -ms-transform: translateY(0);
@@ -1478,7 +1482,7 @@ li {
     -o-transform: translateY(0);
        transform: translateY(0); } }
 
-@keyframes bounce {
+@keyframes slowbounce {
   0% {
     -moz-transform: translateY(0);
     -ms-transform: translateY(0);

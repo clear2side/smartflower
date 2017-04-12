@@ -1,7 +1,3 @@
-$(document).ready(function() {
-
-});
-
 $("form").submit(function() {
     // Получение ID формы
     var formID = $(this).attr('id');
@@ -22,8 +18,6 @@ $("form").submit(function() {
     });
     return false;
 });
-
-/*-------------  -------------*/
 
 $(".header__description .tab_item").not(":first").hide();
 $(".header__description .description-tabs__wrapper .tab").click(function() {
