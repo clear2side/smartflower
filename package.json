@@ -23,8 +23,8 @@
     "gulp-rename": "*",
     "gulp-sass": "*",
     "gulp-scss": "*",
+    "gulp-sftp": "^0.1.5",
     "gulp-uglifyjs": "*",
-    "gulp-uncss": "^1.0.6",
     "gulp-useref": "*",
     "imagemin-pngquant": "*"
   }

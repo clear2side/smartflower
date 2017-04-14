@@ -5,7 +5,7 @@ $("form").submit(function() {
     var formNm = $('#' + formID);
     $.ajax({
         type: "POST",
-        url: 'mail.php',
+        url: 'php/mail.php',
         data: formNm.serialize(),
         success: function(data) {
             // Вывод текста результата отправки

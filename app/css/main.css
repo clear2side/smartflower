@@ -760,11 +760,6 @@ an absolute positioned element -------------*/
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box; }
-  #section2:after, #section2:before {
-    display: table;
-    content: ""; }
-  #section2:after {
-    clear: both; }
   #section2:before {
     content: '';
     position: absolute;
@@ -784,31 +779,6 @@ an absolute positioned element -------------*/
     display: block;
     z-index: 100; }
 
-.video__description {
-  display: table;
-  width: 25%;
-  height: 100%;
-  padding: 30px 70px;
-  font-size: 18px;
-  float: left; }
-  .video__description h4 {
-    font-size: 26px;
-    text-align: center;
-    margin-bottom: 19%;
-    font-weight: 700; }
-  .video__description p {
-    text-align: center;
-    font-weight: 100; }
-  .video__description span {
-    display: table-cell;
-    position: relative;
-    vertical-align: middle; }
-
-.video__wrap {
-  width: 75%;
-  height: 100%;
-  float: left; }
-
 /*------------- section 3 slider-------------*/
 #section3 {
   text-align: center;
@@ -825,7 +795,7 @@ an absolute positioned element -------------*/
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(255, 255, 255, 0.75); }
+    background-color: rgba(0, 0, 0, 0.7); }
 
 .slide {
   padding: 0;
@@ -848,7 +818,7 @@ an absolute positioned element -------------*/
   vertical-align: middle;
   line-height: 60px;
   margin: 0;
-  color: #333; }
+  color: #fff; }
 
 .slider__img {
   display: inline-block;
@@ -862,31 +832,18 @@ an absolute positioned element -------------*/
 .carousel-caption {
   max-width: 60%;
   margin: 0 auto;
-  font-size: 16px; }
+  font-size: 17px;
+  font-weight: bold;
+  color: #fff; }
 
 .fp-tableCell {
   vertical-align: top; }
 
 .fp-controlArrow.fp-prev {
-  vertical-align: top;
-  left: 15% !important;
-  border: none; }
-  .fp-controlArrow.fp-prev:after {
-    content: '\2329' !important;
-    color: #000 !important;
-    font-size: 80px; }
-  .fp-controlArrow.fp-prev:hover:after {
-    color: #003469 !important; }
+  margin-left: 20px; }
 
 .fp-controlArrow.fp-next {
-  right: 20% !important;
-  border: none; }
-  .fp-controlArrow.fp-next:after {
-    content: '\232A' !important;
-    color: #000 !important;
-    font-size: 80px; }
-  .fp-controlArrow.fp-next:hover:after {
-    color: #003469 !important; }
+  margin-right: 30px; }
 
 /*------------- section4 -------------*/
 #section4 {

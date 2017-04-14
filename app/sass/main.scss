@@ -172,7 +172,6 @@
 /*------------- section2 video -------------*/
 
 #section2 {
-    @include clearfix;
     box-sizing: border-box;
     &:before {
         content: '';
@@ -196,36 +195,6 @@
     }
 }
 
-.video__description {
-    display: table;
-    width: 25%;
-    height: 100%;
-    padding: 30px 70px;
-    font-size: 18px;
-    float: left;
-    h4 {
-        font-size: 26px;
-        text-align: center;
-        margin-bottom: 19%;
-        font-weight: 700;
-    }
-    p {
-        text-align: center;
-        font-weight: 100;
-    }
-    span {
-        display: table-cell;
-        position: relative;
-        vertical-align: middle;
-    }
-}
-
-.video__wrap {
-    width: 75%;
-    height: 100%;
-    float: left;
-}
-
 
 /*------------- section 3 slider-------------*/
 
@@ -242,7 +211,7 @@
         bottom: 0;
         left: 0;
         right: 0;
-        background-color: rgba(#fff, 0.75);
+        background-color: rgba(#000, .7);
     }
 }
 
@@ -264,7 +233,7 @@
     vertical-align: middle;
     line-height: 60px;
     margin: 0;
-    color: $text-color;
+    color: #fff;
 }
 
 .slider__img {
@@ -278,7 +247,9 @@
 .carousel-caption {
     max-width: 60%;
     margin: 0 auto;
-    font-size: 16px;
+    font-size: 17px;
+    font-weight: bold;
+    color: #fff;
 }
 
 .fp-tableCell {
@@ -286,30 +257,11 @@
 }
 
 .fp-controlArrow.fp-prev {
-    vertical-align: top;
-    left: 15% !important;
-    border: none;
-    &:after {
-        content: '\2329' !important;
-        color: #000 !important;
-        font-size: 80px;
-    }
-    &:hover:after {
-        color: $blue-color !important;
-    }
+    margin-left: 20px;
 }
 
 .fp-controlArrow.fp-next {
-    right: 20% !important;
-    border: none;
-    &:after {
-        content: '\232A' !important;
-        color: #000 !important;
-        font-size: 80px;
-    }
-    &:hover:after {
-        color: $blue-color !important;
-    }
+    margin-right: 30px;
 }
 
 
