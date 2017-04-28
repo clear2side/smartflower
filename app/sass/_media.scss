@@ -45,24 +45,20 @@
     .header__logo,
     .header__tel {
         float: none !important;
-        text-align: center !important;
+        margin-bottom: 50px;
     }
     .header__description {
         margin-top: 0px !important;
         h3 {
             display: inline-block;
-            text-align: center;
             font-size: 25px !important;
         }
     }
+    .description-tabs__wrapper {
+        margin-top: 50px !important;
+    }
     .description__tabs--button {
         margin: 0 !important;
-    }
-    .video__description {
-        display: none !important;
-    }
-    .video__wrap {
-        width: 100% !important;
     }
     .slider__teaser {
         font-size: 25px !important;
@@ -83,9 +79,6 @@
         h3 {
             font-size: 25px !important;
         }
-        h4 {
-            display: none !important;
-        }
         .tech__info {
             margin-top: 20px !important;
             font-size: 14px !important;
@@ -102,7 +95,7 @@
             div {
                 display: block !important;
                 position: static !important;
-                margin: 15px;
+                margin: 28px;
             }
             button {
                 font-size: 15px;
@@ -127,9 +120,6 @@
     }
     .header__description {
         margin-top: 10px !important;
-        h3 {
-            display: none !important;
-        }
     }
     .description__tabs {
         margin-top: 20px;
@@ -183,9 +173,6 @@
     #modal1Title {
         display: none !important;
     }
-    .hamburger {
-        display: none;
-    }
     .remodal {
         max-width: 420px;
     }
@@ -195,7 +182,16 @@
 /*-------------height 600px 480px-------------*/
 
 @media only screen and (max-height: 480px) {
+    .header__logo {
+        margin: 0;
+    }
     .header__description h3 {
+        display: none !important;
+    }
+    .description-tabs__wrapper {
+        margin-top: 10px !important;
+    }
+    .hamburger {
         display: none;
     }
     .video__description {
@@ -219,8 +215,11 @@
         bottom: 0% !important;
     }
     #section4 {
-        padding: 0 !important;
-        h4 {
+        padding: 10px !important;
+        h3:nth-child(1) {
+            margin-bottom: 10px !important;
+        }
+        h3:nth-child(2) {
             display: none !important;
         }
     }
@@ -256,21 +255,35 @@
         top: 15px;
         right: 35px;
     }
+    .fp-controlArrow.fp-prev {
+        margin-top: -45% !important;
+    }
+    .fp-controlArrow.fp-next {
+        margin-top: -45% !important;
+    }
 }
 
-@media only screen and (max-height: 600px) {
+@media only screen and (max-height: 640px) {
     .header__logo,
     .header__tel {
+        margin: 0;
         padding: 0 !important;
     }
     .header__description {
-        margin-top: 30px !important;
+        margin-top: 20px !important;
     }
     .header__description {
-        margin-top: 30px !important;
+        margin-top: 20px !important;
         h3 {
-            font-size: 25px !important;
+            margin: 5px !important;
+            font-size: 20px !important;
+            &:nth-child(3) {
+                display: none !important;
+            }
         }
+    }
+    .description-tabs__wrapper {
+        margin-top: 10px !important;
     }
     .video__description {
         padding: 0px 30px !important;
@@ -280,15 +293,18 @@
     }
     #section4 {
         h3 {
-            font-size: 30px;
-        }
-        h4 {
-            font-size: 20px !important;
+            font-size: 20px;
         }
     }
     .tech__info {
         margin-top: 20px !important;
         font-size: 14px;
+    }
+    .fp-controlArrow.fp-prev {
+        margin-top: 47%;
+    }
+    .fp-controlArrow.fp-next {
+        margin-top: 47%;
     }
 }
 

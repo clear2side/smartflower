@@ -4,6 +4,14 @@
 @import "mixins/layout";
 @import "mixins/mixins";
 @import "mixins/variables";
+
+/*------------- config -------------*/
+
+.section {
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
 .button {
     padding: 12px 40px;
     font-size: 14px;
@@ -29,6 +37,7 @@
     background-position: right;
     color: white;
     font-weight: bold;
+    overflow: hidden;
     .container {
         position: relative;
     }
@@ -78,18 +87,19 @@
 .header__description {
     margin-top: 3%;
     h3 {
+        display: block;
         font-size: 30px;
         font-weight: 300;
         padding: 0;
-        margin: 0;
+        margin: 10px;
     }
 }
 
 .description-tabs__wrapper {
     font-weight: 300;
-    margin-top: 2%;
     max-width: 630px;
     animation: zoomInUp 1s ease-out;
+    margin-right: 15px;
 }
 
 .description__tabs {
@@ -172,27 +182,18 @@
 /*------------- section2 video -------------*/
 
 #section2 {
-    box-sizing: border-box;
-    &:before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 50px;
-        width: 61%;
-        display: block;
-        z-index: 100;
-    }
-    &:after {
-        content: '';
-        position: absolute;
-        top: 0;
-        bottom: 50px;
-        right: 0;
-        width: 36%;
-        display: block;
-        z-index: 100;
-    }
+    background-color: black;
+    background-size: cover;
+}
+
+#section2 video {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 200;
 }
 
 
@@ -204,6 +205,7 @@
     background-position: right bottom;
     background-size: cover;
     z-index: 50;
+    overflow: hidden;
     &:before {
         content: '';
         position: absolute;
@@ -257,7 +259,7 @@
 }
 
 .fp-controlArrow.fp-prev {
-    margin-left: 20px;
+    margin-left: 30px;
 }
 
 .fp-controlArrow.fp-next {
@@ -268,24 +270,30 @@
 /*------------- section4 -------------*/
 
 #section4 {
-    background-color: #F8F6F7;
-    padding-top: 30px;
-    h3 {
-        font-weight: 300;
-        font-size: 40px;
-        margin: 0;
-    }
-    h4 {
-        font-weight: 300;
-        font-size: 30px;
-        margin: 0;
-    }
+    background-image: url(../img/4-page.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom right;
+    padding-top: 15px;
+    overflow: hidden;
 }
 
 .tech__info {
-    margin-top: 40px;
+    box-sizing: border-box;
+    display: block;
+    margin-top: 5px;
     font-weight: 600;
     @include clearfix;
+    h3 {
+        font-weight: 600;
+        font-size: 30px;
+        margin: 0;
+        padding: 0;
+        &:nth-child(2) {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+    }
     .left__info {
         float: left;
         width: 50%;
@@ -300,7 +308,12 @@
 }
 
 .tech__img {
-    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 30px;
+    margin: auto;
+    width: 85%;
 }
 
 
@@ -311,6 +324,7 @@
     background-image: url(../img/last-page.jpg);
     background-position: bottom center;
     background-size: cover;
+    overflow: hidden;
     .container {
         position: relative;
     }
@@ -731,12 +745,25 @@ html.remodal-is-locked {
     background-color: #fff;
 }
 
+#myNav {
+    position: absolute !important;
+}
+
 .hamburger {
-    color: #fff;
+    position: absolute;
+    top: 12px;
+    right: -60px;
     cursor: pointer;
-    &:hover {
-        color: $c12;
+    &:hover .hamburger__telephone * {
+        fill: $c12;
     }
+}
+
+.hamburger__telephone * {
+    fill: #fff;
+    height: 50px;
+    width: 120px;
+    transform: rotate(9deg);
 }
 
 .overlay-content ul {
@@ -756,7 +783,7 @@ html.remodal-is-locked {
 }
 
 
-/*------------- hamburger -------------*/
+/*------------- nav hamburger -------------*/
 
 li {
     list-style: none;
@@ -767,7 +794,7 @@ li {
 }
 
 .nav {
-    position: fixed;
+    position: absolute;
     top: 25px;
     right: 50px;
     z-index: 200;

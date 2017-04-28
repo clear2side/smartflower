@@ -46,7 +46,7 @@ gulp.task('browser-sync', function() {
         server: {
             baseDir: 'app'
         },
-        notify: false
+        notify: true
     })
 });
 
@@ -62,10 +62,11 @@ gulp.task('build', ['clean', 'img', 'sass'], function() {
         .pipe(useref())
         .pipe(gulpif('*.js', uglify()))
         .pipe(gulpif('*.css', minifyCss()))
-        .pipe(gulp.dest('dist'));
-
-    var buildFonts = gulp.src('app/fonts/**/*')
-        .pipe(gulp.dest('dist/fonts'));
-    var buildPhp = gulp.src('app/php/**/*')
-        .pipe(gulp.dest('dist/php'));
+        .pipe(gulp.dest('dist')),
+        buildFonts = gulp.src('app/fonts/**/*')
+        .pipe(gulp.dest('dist/fonts')),
+        buildPhp = gulp.src('app/php/**/*')
+        .pipe(gulp.dest('dist/php')),
+        buildVideo = gulp.src('app/video/**/*')
+        .pipe(gulp.dest('dist/video'));
 })
